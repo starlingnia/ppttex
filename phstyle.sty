@@ -1,0 +1,49 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{phstyle}[2024/05/12 Custom Style based on ph1.tex]
+
+% ---- Packages ----
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{xcolor}
+\RequirePackage{amsmath, amssymb}
+% Removed mathptmx and helvet to use Computer Modern (cmr)
+\RequirePackage{ragged2e}
+\RequirePackage{geometry}
+\RequirePackage{etoolbox}
+
+% ---- Color Definitions ----
+\definecolor{phTitleBlue}{rgb}{0.117647, 0.227451, 0.541177}
+\definecolor{phTextDark}{rgb}{0.066667, 0.094118, 0.152941}
+\definecolor{phGray}{rgb}{0.294118, 0.333333, 0.388235}
+\definecolor{TitleBlue}{RGB}{33, 64, 143}     % 标题深蓝色
+
+
+% ---- Font Settings ----
+% Using cmr (Computer Modern) and removing bold as requested
+\newcommand{\phTitleFont}{\fontfamily{cmr}\selectfont\color{phTitleBlue}}
+\newcommand{\phSerifFont}{\fontfamily{cmr}\selectfont\color{phTextDark}}
+\newcommand{\phBodyFont}{\fontfamily{cmr}\selectfont\color{phTextDark}}
+
+% ---- Header/Title Macros ----
+\newcommand{\mytitle}[1]{{\centering\fontsize{22}{24}\phTitleFont #1\par}\bigskip}
+\newcommand{\mysubtitle}[1]{{\raggedright\fontsize{18}{22}\fontfamily{cmr}\selectfont\color{TitleBlue} #1\par}\medskip}
+\newcommand{\myheading}[1]{{\raggedright\fontsize{18}{22}\phTitleFont #1\par}\smallskip}
+
+% ---- Text Macros ----
+\newcommand{\mytext}[1]{{\fontsize{7}{8}\phBodyFont #1}\par}
+\newcommand{\myimportant}[1]{{#1}\par} 
+\newcommand{\mybullet}{\textcolor{phTextDark}{\textbullet}\space}
+
+% ---- Global Defaults ----
+\AtBeginDocument{%
+    \phSerifFont
+    \fontsize{12}{13}\selectfont
+    \justifying
+    \setlength{\leftskip}{0.5cm} 
+}
+
+% 5. 调整列表(itemize)的全局间距、对齐和字体大小
+\setbeamertemplate{itemize items}[circle] % 圆点样式
+
+
+\endinput

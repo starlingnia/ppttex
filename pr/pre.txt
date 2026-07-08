@@ -1,0 +1,50 @@
+Slide 1: Title Slide
+ I am Junxiong Nie from Osaka University. Today, I am going to present our work on the "Analysis of Symmetry of 2-point Correlation Functions in Finite Temperature QCD using Möbius Domain-Wall Fermions"This research is conducted as part of the JLQCD Collaboration.
+
+Slide 2: Outline
+Here is the outline of my presentation. I will start with the research and theoretical background. Then, I will describe our lattice simulation setup. After that, I will present our numerical results and conclude with a summary and outlook.
+
+Slide 3: Research Background
+The restoration of U(1)A axial symmetry is crucial for determining the order of the chiral phase transition. In our previous work on 2-flavor QCD, we found that both chiral and U(1)A symmetries are effectively restored near the critical temperature. In this study, we extend this investigation to the more realistic N_f=2+1 case, including the strange quark, to see if this restoration persists near the physical point. We use meson screening masses as a probe for symmetry breaking.
+
+Slide 4: Symmetry of QCD
+Here is the QCD Lagrangian, and in the limit of zero light quark masses, we have flavored chiral symmetry $SU(2)_L \times SU(2)_R$ and $U(1)_A$ symmetry. We study these symmetries by looking at the mass difference between the screening masses of different meson channels.
+
+Slide 5: Meson Correlation Functions
+We consider a set of meson operators including Scalar, Pseudo-scalar, Vector, Axial-Vector, Tensor, and Axial-Tensor. We measure their two-point correlation functions. At large distances, these functions should behave exponentially, and accroding to the symmetry properties of x and L-x, the asymptotic behavior of the 2-point correlation function at large distances should be approximately be a cosh, allowing us to extract the screening masses $m_\Gamma$ by fitting to a cosinh function.
+
+Slide 6: Symmetry of Correlation Functions
+Symmetry transformations map different operators to each other.  $U(1)_A$ relates Scalar and Pseudo-scalar channels, as well as Tensor and Axial-Tensor. Chiral symmetry relates Vector and Axial-Vector. We also consider a larger possible symmetry called Chiral-Spin symmetry ($SU(2)_{CS}$), which would relate all these channels under certain conditions.
+
+Slide 7: Order of Chiral Phase Transition
+The order of the chiral phase transition depends on the number of flavors and the status of the $U(1)_A$ anomaly. For $N_f \geq 3$, the transition is expected to be first-order regardless of the anomaly. However, for $N_f=2$, the $U(1)_A$ restoration could change the transition from second-order $O(4)$ to first-order.But recently higher-loop computations
+and FRG computations suggested different possibilities [Vicari et al. , G. Fejos], and
+Conformal Boostrap results indicate some interesting points too[Otsuki-Nakayama]
+
+Slide 8: Possible Emergent Larger Symmetry
+High-temperature perturbative analysis suggests that flavor non-singlet channels might show degenerate screening masses, leading to an emergent Chiral-Spin symmetry $SU(2)_{CS}$. This symmetry goes beyond the standard chiral symmetry and involves transformations between different Dirac structures.
+
+Slide 9: Lattice QCD Numerical Setup (1)
+For our lattice simulations, we use Möbius Domain-Wall Fermions, which provide good chiral symmetry on the lattice. The precision is controlled by the residual mass $m_{res}$. As shown in the table, we present residual mass and the ratio of residual and corresponding light quark mass. we could see $m_{res}$ decreases significantly as the temperature increases, ensuring good chiral properties in the high-temperature regime.
+
+Slide 10: Lattice QCD Numerical Setup (2)
+We performed simulations on a $48^3 \times 16$ lattice near the physical point. This slide shows the bare dimensionless quark masses、beta parameter used for different temperature points, ranging from 138 MeV to 202 MeV.
+
+Slide 11: Extract Screening Masses
+To extract the screening masses, we use multi-source averaging to improve data quality. It's averaing around 16 sources. And We fit the ratio of correlation functions to obtain the effective mass. Error estimation is performed using the Jackknife method to account for correlations, and using binning-analysis to saturate . The plots show an example of the correlation data and the resulting effective mass for the Vector channel at beta4.17.
+
+Slide 12: Numerical Results
+Here we show the overall numerical results. The left plot displays the screening masses for different channels across the temperature range. The right plot shows the mass differences, which represent the degree of symmetry breaking. The grey band indicates the pseudo-critical temperature region around 165 MeV.
+As we could see, the meson screening mass do tend to close to the Chiral Perturbation theory result $2\pi T $ in high temperature. And we could see the trendancy of the degenerate of symmetric channel.
+
+Slide 13: SU(2)_L x SU(2)_R Chiral Symmetry
+Focusing on the $SU(2)_L \times SU(2)_R$ chiral symmetry, we see that the difference between Axial-Vector and Vector channels decreases and becomes consistent with zero at higher temperatures, indicating chiral symmetry restoration. However, the exact pseudo-critical temperature is somewhat blurred due to the finite quark masses.
+
+Slide 14: U(1)_A Symmetry
+Regarding $U(1)_A$ symmetry, the difference between the Axial-Tensor and Tensor channels, as well as Scalar and Pseudo-scalar, tends to decrease at high temperatures. This suggests an approximate restoration of $U(1)_A$ symmetry, which implicate an anomaly suppression, in the high-temperature regime.
+
+Slide 15: SU(2)_CS Symmetry
+As for the proposed Chiral-Spin symmetry, our current data shows that it is not yet clearly visible at the temperatures we analyzed near the phase transition. This suggests that if $SU(2)_{CS}$ emerges, it likelyit requires exploration of much higher temperature domains in our $N_f=2+1$ case.
+
+Slide 16: Summary and Outlook
+In summary, our preliminary results for $N_f=2+1$ QCD show that near $T=164$ MeV, both chiral and $U(1)_A$ symmetries appear to be restored, though with relatively large errors. Furthermore, the Chiral-Spin symmetry is not visible below 202 MeV. For future work, our priority is to improve the data quality. We want to try to implement more sophisticated statistical methods to improve our analysis. We also need to precisely determine the critical temperature using chiral susceptibility.
