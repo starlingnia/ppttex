@@ -75,20 +75,22 @@
 \vfill
 \begin{itemize}
 %According to {\scriptsize [Pisarski \& Wilczek (1983)]},
+\item Chiral Phase Transition is a very successful way to phenomenologically describe the Hadron and Quark Gluon
+ Plasma Structure  
 \item The behavior of $U(1)_{\rm A}$ axial symmetry restoration is important to
 the order of the chiral phase transition (and universality class if it is 2nd-order), so as our prediction capability with perturbative method
-\item The historical effective linear sigma model analysis showed the $U(1)_{\rm A}$ can not be restored before the transition, if the transition is second order, due to the non-existence of stable IR fixed point under non vanish anomalus $U(1)_{\rm A}$ effect in 2 flavor case
+\item The historical effective linear sigma model analysis showed the $U(1)_{\rm A}$ can not be restored before the transition, if the transition is second order %due to the non-existence of stable IR fixed point under non vanish anomalus $U(1)_{\rm A}$ effect in 2 flavor case
 \item Previous Lattice simulation study, such as HotQCD, concluded that the chiral phase transition is second order and extracted the universal coefficient, while $U(1)_{\rm A}$ is restored near 1.5$T_c \sim 2 T_c$
 \end{itemize}
 \vfill
 \end{frame}
-
+%the higher loop linear sigma model study and Functional Renormalization Group analysis
 \begin{frame}
 \myheading{Motivation for this work}
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
-\item However, the higher loop linear sigma model study and Functional Renormalization Group analysis showed there's nontrivial stable IR fixed point and also the possibility of weak 1st order transition. So, the observation of universal behavior is not enough to conclude the $U(1)_{\rm A}$ symmetry behavior and also the universality class
+\item However, further studies showed there's nontrivial stable IR fixed point and universality with restored $U(1)_{\rm A}$ and also the possibility of weak 1st order transition. 
 \item The previous study use Highly Improved Staggered fermion that breaks the chiral symmetry behavior in finite lattice spacing non-negligbly. So these previous conclusions of $U(1)_{\rm A}$ restoration need to be careful re-examined
 \item The previous work in the 2-flavor case by JLQCD
  {\scriptsize [Phys. Rev. D \textbf{111}, 114506 (2025)]}
@@ -125,7 +127,7 @@ S}$, Gauge Boson+Fermion\hfill\null
 
 \vspace{1em}
 $S =
-\int d^4x \left[ - \frac{1}{4} \mathrm{Tr} F \wedge \star F
+\int d^4x \left[ - \frac{1}{2g^2} \mathrm{Tr} F^{\mu\nu} F_{\mu\nu}
 + \bar q_a (i \slashed{D} - m_a) q_a \right]$, $a$ in
 [1,$N_f$]
 
@@ -245,9 +247,10 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 \fontsize{11pt}{14pt}\selectfont
 \vfill
 \begin{itemize}
-    \item Perturbative $4-\epsilon$ expansion Renormalization Group Analysis of effective linear sigma model for $\langle \bar{q} P_L q \rangle$. They found for $N_f > \sqrt{3}$ flavor symmetry, there's no stable IR fixed point. {\scriptsize [Pisarski-Wilczek (1983)]} \\
-    \item The anomaly effect term is a determinant term in the effective linear sigma model, which is a $N_f$-th order term. For $N_f \geq 3 $ flavor case, it doesn't change the order of the transition.  \\
-   \item But for $N_f = 2$ flavor case, it becomes a quadratic term, which can smooth out the singularity and change the transition to second order. If the anomaly effect still exists, the transition can be $\mathrm{O}(4)$ class. If the anomaly effect is  suppressed and  $\mathrm{U}(1)_{\mathrm{A}} $ symmetry is restored before or at the critical temperature $T_c$, then transition should be still first order
+    \item Perturbative $4-\epsilon$ expansion Renormalization Group Analysis of effective $\Phi^4$ linear sigma model for $\langle \bar{q} P_L q \rangle$. They found for $N_f > \sqrt{3}$ flavor symmetry, there's no stable IR fixed point. {\scriptsize [Pisarski-Wilczek (1983)]} \\
+    \item %The anomaly effect term is a determinant term in the effective linear sigma model, which is a $N_f$-th order term. 
+    For $N_f \geq 3 $ flavor case, the anomaly effect doesn't change the order of the transition;But for $N_f = 2$ flavor case, it becomes a quadratic term, which can smooth out the singularity and change the transition to second order.  \\
+   \item  If the anomaly effect still exists, the transition can be $\mathrm{O}(4)$ class. If the anomaly effect is  suppressed and  $\mathrm{U}(1)_{\mathrm{A}} $ symmetry is restored before or at the critical temperature $T_c$, then transition should be still first order
 \item But recently higher-loop computations and FRG computations suggested different possibilities {\scriptsize [E.Vicari ,F.Basile, A.Pelissetto 2005 , G. Fejos 2022]}, and Conformal Boostrap results indicate some interesting points too{\scriptsize [Nakayama Ohtsuki 2016}
 \end{itemize}
 \vfill
@@ -265,19 +268,11 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 \vfill
 
 \begin{itemize}
-\item Perturbative analysis of screening masses from NRQCD$_3$
-{\scriptsize{[Laine, M., Vepsäläinen, M. (2004)]}}:  $\left[ 2 M - \frac{\nabla_{\ensuremath{\boldsymbol{r}}}^2}{\pi T} +
-\right. $ $ \left. V(\ensuremath{\boldsymbol{r}}) \right]\Psi_0 =
-m_{\ensuremath{\operatorname{scr}}} \Psi_0$, where $M$ is the mass parameter in model
-\item
-$M = \pi T + g^2 T \frac{C_F}{8 \pi} +\mathcal{O} (g^4 T)$
+\item Perturbative analysis of screening masses from NRQCD$_3$ {\scriptsize{[Laine \& Vepsäläinen (2004)]}}:
+\[ \left[ 2 M - \frac{\nabla_{\ensuremath{\boldsymbol{r}}}^2}{\pi T} + V(\ensuremath{\boldsymbol{r}}) \right]\Psi_0 = m_{\ensuremath{\operatorname{scr}}} \Psi_0 \]
 
-\item We write $(m_{src}- 2M)$ as $g_{\mathrm{E}}^2  \frac{C_F}{2 \pi} \hat E_0$, where $\hat E_0$(around 0.38237 for 2-flavor) is computed numerically
-
-\item For two falvor case, we got $m_{\mathrm{scr}}= 2\pi T +
- g_{\mathrm{E}}^2  \frac{C_F}{2 \pi} (1/2+\hat E_0 )= 2\pi T
-+ 0.1872g^2 T
-$
+\item Degenerate Screening Mass: Solving the equation for the $N_f=2$ case yields:
+\[ m_{\mathrm{scr}} = 2\pi T + 0.1872 g^2 T \]
 
 \item It  predicts the flavor non-singlet channel will tend to behave same screening mass.
 Thus,a larger symmetry, Chiral-Spin Symmetry $SU(2)_{CS}$ , may emerge\begin{align*}
@@ -296,64 +291,128 @@ where $\Sigma^i$ has three components,
 \end{frame}
 
 % ==============================================================================
+% Slide 8b: Domain-Wall Fermions (Domain-Wall 费米子介绍页)
+% ==============================================================================
+\begin{frame}
+\myheading{Domain-Wall Fermions (DWF)}
+\vfill
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5pt}{11.5pt}\selectfont}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\begin{itemize}
+    \item {Overlap Dirac Operator}:
+    The massless operator $D_{\mathrm{ov}}(0) = \frac{1}{2} (1 + \gamma_5 \mathrm{sgn}(H_W))$ satisfies the Ginsparg-Wilson relation:
+    \[ \gamma_5 D_{\mathrm{ov}} + D_{\mathrm{ov}} \gamma_5 = 2 D_{\mathrm{ov}} \gamma_5 D_{\mathrm{ov}} \]
+    The massive overlap operator is defined as:
+    \[ D_{\mathrm{ov}}(m) = D_{\mathrm{ov}}(0) + m (1 - D_{\mathrm{ov}}(0)) = \frac{1+m}{2} + \frac{1-m}{2} \gamma_5 \mathrm{sgn}(H_W) \]
+    
+    \item {5D Domain-Wall Realization}:
+    DWF approximates the sign function $\mathrm{sgn}(H_W)$ by introducing a 5th dimension of size $L_s$. The effective 4D operator is:
+    \[ D^{\text{4D}}_{\mathrm{DW}} (m) = \frac{1+ m}{2} + \frac{1 - m}{2} \gamma_5 \tanh (L_s \tanh^{- 1} (H_M)) \]
+    where $H_M = \gamma_5 \frac{2 D_W}{2 + D_W}$. As $L_s \to \infty$, it converges exponentially to the exact overlap operator $D_{\mathrm{ov}}(m)$.
+\end{itemize}
+\vfill
+\end{frame}
+
+% ==============================================================================
 % Slide 9: Lattice QCD Setup - Residual Mass (晶格QCD数值设置 - 残余质量表)
 % ==============================================================================
 \begin{frame}
 \myheading{Lattice QCD Numerical Setup}
 \vfill
-\mybullet Möbius Domain-Wall Fermions:
-The effective 4D operator is[Brower, R. C., Neff, H., \& Orginos, K.~(2012)]:
-\[ {\color{black}{D^{\text{4D}}_{\ensuremath{\operatorname{DW}}} (m) = \frac{1
-   + m}{2} + \frac{1 - m}{2} \gamma_5 \tanh (L_s \tanh^{- 1} (H_M)),}} \]
-where {\color{black}{$m$}} is the bare quark mass, and the Möbius kernel
-{\color{black}{${\color{black}{H_M}}$}} is $ {\color{black}{H_M = \gamma_5  \frac{2 D_W}{2 + D_W}}} $
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{10.5pt}\selectfont}
+\fontsize{10.5pt}{12.5pt}\selectfont
 
-\vspace{1em}
-The precision of chiral symmetry could be estimated by Residual Mass $m_{res}$, and at low beta case is not so good:
+{5D Möbius Dirac Operator ($L_s = 12$)}:
+\vspace{-1.2em}
+{\scriptsize
+\[ D^{\text{5D}}_{s,s'}(m) = D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) - m (D_{-}^{(1)} P_+ \delta_{s,1}\delta_{s',L_s} + D_{-}^{(L_s)} P_- \delta_{s,L_s}\delta_{s',1}) \]
+}
 
-\begin{table}[htbp]
-    \centering
-    \scriptsize
-    \begin{tabular}{lcccccccc}
-        \toprule
-        $T$ (MeV) & 138 & 145 & 153 & 157 & 164.5 & 176 & 202 & 241.6 \\
-        \midrule
-        $m_{res}/m_l$ & 0.9087 & 0.5360 & 0.3394 & 0.2744 & 0.1836 & 0.1041 & 0.0299 & 0.0049 \\
-        $m_{res}$ & 7.31e-4 & 4.98e-4 & 3.40e-4 & 2.80e-4 & 1.91e-4 & 1.08e-4 & 2.81e-5 & 3.75e-6 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+{\scriptsize where $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, and $P_\pm = \frac{1 \pm \gamma_5}{2}$.}
+
+\vspace{0.6em}
+
+
+{Residual Mass $m_{\text{res}}$}:
+Explicit chiral symmetry violation due to finite $L_s$ is estimated by:
+
+{\scriptsize
+\[ am_{\text{res}} = \frac{\sum_{\vec{x}} \langle J_{5q}(\vec{x}, t) P(\vec{0}, 0) \rangle}{\sum_{\vec{x}} \langle P(\vec{x}, t) P(\vec{0}, 0) \rangle} \]
+}
+
+At lower $\beta$ values, $m_{\text{res}}$ is non-negligible:
+
+\vspace{0.4em}
+\centering
+\tiny
+\setlength{\tabcolsep}{3.5pt}
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{lcccccccc}
+    \toprule
+    $T$ (MeV) & 138 & 145 & 153 & 157 & 164.5 & 176 & 202 & 241.6 \\
+    \midrule
+    $m_{\text{res}}/m_l$ & 0.9087 & 0.5360 & 0.3394 & 0.2744 & 0.1836 & 0.1041 & 0.0299 & 0.0049 \\
+    $m_{\text{res}}$ & 7.31e-4 & 4.98e-4 & 3.40e-4 & 2.80e-4 & 1.91e-4 & 1.08e-4 & 2.81e-5 & 3.75e-6 \\
+    \bottomrule
+\end{tabular}
 \vfill
 \end{frame}
 
 % ==============================================================================
-% Slide 10: Lattice QCD Setup - Simulation Table (晶格QCD数值设置 - 参数与温度表)
+% Slide 10: Lattice Setup \& Configurations at Physical Point (晶格设置与配置数合并页)
 % ==============================================================================
 \begin{frame}
-\myheading{Lattice QCD Numerical Setup at physical point}
+\myheading{Lattice Setup \& Configurations at Physical Point}
 \vfill
-The simulation is run with lattice size $48^3 \times 16$ (near the physical point):
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5pt}{11.5pt}\selectfont}
+\fontsize{9.5pt}{11.5pt}\selectfont
+\begin{itemize}
+    \item The simulation is run with lattice size $48^3 \times 16$ near the physical point.
+    \item To improve data quality, we performed {16-source} measurements for all channels and directions.
+    \item The simulation parameters (left) and total configuration count $N_{\mathrm{conf}}$ (right) are summarized below:
+\end{itemize}
 
-\vspace{1ex} % 增加一点文字与表格的间距
+\vspace{0.3em}
 
-\begin{table}[htbp]
-    \centering
-    \renewcommand{\arraystretch}{1.2} % 稍微拉大行距，看起来更舒适
-    \begin{tabular}{cccc}
-        \toprule
-        $\beta$ & $T$ (MeV) & $am_s$ & $am$ \\
-        \midrule
-        4.13 & 138 & 0.043547 & 0.000805 \\
-        4.15 & 145 & 0.040843 & 0.000930 \\
-        4.17 & 153 & 0.038400 & 0.001001 \\
-        4.18 & 157 & 0.037265 & 0.001022 \\
-        4.20 & 164.5 & 0.035150 & 0.001041 \\
-        4.23 & 176 & 0.032315 & 0.001033 \\
-        4.30 & 202 & 0.026930 & 0.000939 \\
-        \bottomrule
-    \end{tabular}
+\begin{columns}[c]
+    % 左列：数值参数表
+    \begin{column}{0.42\textwidth}
+        \centering
+        \scriptsize
+        \renewcommand{\arraystretch}{1.15}
+        \begin{tabular}{cccc}
+            \toprule
+            $\beta$ & $T$ (MeV) & $am_s$ & $am$ \\
+            \midrule
+            4.13 & 138 & 0.043547 & 0.000805 \\
+            4.15 & 145 & 0.040843 & 0.000930 \\
+            4.17 & 153 & 0.038400 & 0.001001 \\
+            4.18 & 157 & 0.037265 & 0.001022 \\
+            4.20 & 164.5 & 0.035150 & 0.001041 \\
+            4.23 & 176 & 0.032315 & 0.001033 \\
+            4.30 & 202 & 0.026930 & 0.000939 \\
+            \bottomrule
+        \end{tabular}
+    \end{column}
+
+    % 右列：配置数与测量数表
+    \begin{column}{0.55\textwidth}
+        \centering
+        \tiny
+        \renewcommand{\arraystretch}{1.2}
+        \setlength{\tabcolsep}{3.5pt}
+        \begin{tabular}{lccccccc}
+            \toprule
+            $\beta$ & 4.13 & 4.15 & 4.17 & 4.18 & 4.20 & 4.23 & 4.30 \\
+            \midrule
+            $T$ (MeV) & 138 & 145 & 153 & 157 & 164.5 & 176 & 202 \\
+            $N_{\mathrm{conf}}$ & 395 & 398 & 396 & 402 & 407 & 395 & 404 \\
+            Total Meas. & 6320 & 6368 & 6336 & 6432 & 6512 & 6320 & 6464 \\
+            \bottomrule
+        \end{tabular}
+    \end{column}
+\end{columns}
 \vfill
-\end{table}
 \end{frame}
 
 % ==============================================================================
@@ -391,37 +450,7 @@ To study the symmetry restoration mechanism in the chiral limit, we perform simu
 % ==========================================
 
 
-% ==============================================================================
-% Slide 11: Lattice Measurements & Configurations (格点测量与配置数)
-% ==============================================================================
-\begin{frame}
-\myheading{Lattice Measurements \& Configurations}
-\vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12pt}\selectfont}
-\begin{itemize}
-    \item We performed measurements for each beta parameters, each channels, and each directions
-    \item To  improve the quality of data, we performed \textbf{16-source} measurements
-    \item The total number of configurations ($N_{\mathrm{conf}}$) at physical point analyzed for each temperature/$\beta$ are counted below :
-\end{itemize}
 
-\vspace{1em}
-
-\begin{table}[htbp]
-    \centering
-    \scriptsize
-    \renewcommand{\arraystretch}{1.25}
-    \begin{tabular}{lccccccc}
-        \toprule
-        $\beta$ & 4.13 & 4.15 & 4.17 & 4.18 & 4.20 & 4.23 & 4.30 \\
-        \midrule
-        $T$ (MeV) & 138 & 145 & 153 & 157 & 164.5 & 176 & 202 \\
-        No. of Confs ($N_{\mathrm{conf}}$) & 395 & 398 & 396 & 402 & 407 & 395 & 404 \\
-        Total Meas. ($16 \times N_{\mathrm{conf}}$) & 6320 & 6368 & 6336 & 6432 & 6512 & 6320 & 6464 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-\vfill
-\end{frame}
 
 % ==============================================================================
 % Slide 12: Meson Channels & Directional Averaging (介子信道与方向平均)
@@ -465,19 +494,19 @@ To study the symmetry restoration mechanism in the chiral limit, we perform simu
 \vfill
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12.5pt}\selectfont}
 \begin{itemize}
-    \item \textbf{Local Effective Mass}: Numerically solve the ratio at each spatial coordinate $x$ to obtain the local effective mass $m_{\text{eff}}(x)$:
+    \item {Local Effective Mass}: Numerically solve the ratio at each spatial coordinate $x$ to obtain the local effective mass $m_{\text{eff}}(x)$:
     \[
         \frac{C(x)}{C(x + 1)} = \frac{\cosh(m_{\text{eff}}(x)(x - L/2))}{\cosh(m_{\text{eff}}(x)(x + 1 - L/2))}
     \]
 
-    \item \textbf{Plateau and Range}: The plateau of $m_{\text{eff}}(x)$ at large separations is used to determine a suitable fitting range $[x_{\text{min}}, x_{\text{max}}]$.
+    \item {Plateau and Range}: The plateau of $m_{\text{eff}}(x)$ at large separations is used to determine a suitable fitting range $[x_{\text{min}}, x_{\text{max}}]$.
 
-    \item \textbf{Screening Mass Fit}: The physical screening mass $m_{\text{scr}}$ is extracted by performing a correlated $\chi^2$ fit of $C(x)$ to the asymptotic form:
+    \item {Screening Mass Fit}: The physical screening mass $m_{\text{scr}}$ is extracted by performing a correlated $\chi^2$ fit of $C(x)$ to the asymptotic form:
     \[
         C(x) = A \cosh\left(m_{\text{scr}}\left(x - \frac{L}{2}\right)\right)
     \]
 
-    \item \textbf{Statistical Error}: Jackknife method and Binning analysis are used to handle statistical uncertainties and eliminate HMC autocorrelation bias.
+    \item {Statistical Error}: Jackknife method and Binning analysis are used to handle statistical uncertainties and eliminate HMC autocorrelation bias.
 \end{itemize}
 \vfill
 \end{frame}
@@ -508,36 +537,6 @@ To study the symmetry restoration mechanism in the chiral limit, we perform simu
 \vfill
 \end{frame}
 
-% ==============================================================================
-% Slide 14b: Chiral Condensate (手征凝聚)
-% ==============================================================================
-\begin{frame}
-\myheading{Chiral Condensate \& Crossover Phase Transition}
-\vfill
-\begin{columns}[c]
-    \begin{column}{0.55\textwidth}
-        \centering
-        \includegraphics[width=0.49\textwidth]{conden_plot.png}
-        \includegraphics[width=0.49\textwidth]{conden_re_plot.png} \\
-        \vspace{0.1cm}
-        {\tiny Left: Bare Chiral Condensate, Right: Renormalized Chiral Condensate}
-    \end{column}
-    \begin{column}{0.42\textwidth}
-        \justifying
-        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
-        \textbf{Definition}:
-        {\small
-        \[
-            a^3 \langle \bar{\psi}\psi_q \rangle = \frac{1}{N_s^3 N_\tau} \frac{N_f}{4} \langle \mathrm{Tr} \slashed{D}_q^{-1} \rangle
-        \]}
-        \begin{itemize}
-            \item Order parameter for spontaneous chiral symmetry breaking
-            \item We subtract strange quark part to remove divergence
-        \end{itemize}
-    \end{column}
-\end{columns}
-\vfill
-\end{frame}
 
 % ==============================================================================
 % Slide 14c: Chiral Susceptibility (手征易受率)
@@ -555,15 +554,15 @@ To study the symmetry restoration mechanism in the chiral limit, we perform simu
     \begin{column}{0.45\textwidth}
         \justifying
         \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
-        \textbf{Definition}:
-        {\small
-        \begin{align*}
-            a^2 \chi_{\text{dis}} &= \frac{1}{N_s^3 N_\tau} \left( \frac{N_f}{4} \right)^2 \cdot \\
-            &\quad \left( \langle (\mathrm{Tr} \slashed{D}^{-1})^2 \rangle - \langle \mathrm{Tr} \slashed{D}^{-1} \rangle^2 \right)
-        \end{align*}}
         \begin{itemize}
+            \item \small Definition:
+            {\small
+            \begin{align*}
+                a^2 \chi_{\text{dis}} &= \frac{1}{N_s^3 N_\tau} \left( \frac{N_f}{4} \right)^2 \cdot \\
+                &\quad \left( \langle (\mathrm{Tr} \slashed{D}^{-1})^2 \rangle - \langle \mathrm{Tr} \slashed{D}^{-1} \rangle^2 \right)
+            \end{align*}}
             \item Fluctuations of order parameter, related to topological effects.
-            \item Clear peak determines pseudo-critical temperature: \textbf{$T_c \approx 158$ MeV}.
+            \item Clear peak determines pseudo-critical temperature: {$T_c \approx 158$ MeV}.
         \end{itemize}
     \end{column}
 \end{columns}
@@ -763,18 +762,17 @@ Asymmetry observables as a function of temperature for various light quark masse
 % ==============================================================================
 \begin{frame}
 \myheading{Summary and Outlook}
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
-\fontsize{8.5pt}{11pt}\selectfont
+%\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
 \vfill
 \vspace{0.5ex}
 \begin{itemize}
-    \item \textbf{Physical Point}: Crossover transition with $T_c \approx 158$ MeV. Above $T_c$, chiral and $U(1)_A$ symmetry breakings are consistent with zero within errors.
-    \item \textbf{Chiral Limit Study}: Extrapolations to $am_l \to 0$ support simultaneous restoration of chiral flavor and $U(1)_A$ symmetries (with $T_c \approx 165$ MeV).
-    \item \textbf{Chiral-Spin Symmetry}: Remains broken up to 220 MeV, indicating active non-perturbative chromomagnetic interactions in QGP.
-    \item \textbf{Transition Scenario}:
+    \item {Physical Point}: Crossover transition with $T_c \approx 158$ MeV. Above $T_c$, chiral and $U(1)_A$ symmetry breakings are consistent with zero within errors.
+    \item {Chiral Limit Study}: Extrapolations to $am_l \to 0$ support simultaneous restoration of chiral flavor and $U(1)_A$ symmetries (with $T_c \approx 165$ MeV).
+    \item {Chiral-Spin Symmetry}: Remains broken up to 220 MeV, indicating active non-perturbative chromomagnetic interactions in QGP.
+    \item {Transition Scenario}:
         \begin{itemize}
-            \item \textbf{Previous}: 1st-order if $U(1)_A$ restored; 2nd-order $O(4)$ if $U(1)_A$ remains broken.
-            \item \textbf{New}: $O(4)$ if $U(1)_A$ remains; weak 1st-order, or 2nd-order ($O(4)\times Z_2$, $O(4)\times Z_4$, $O(4)\times O(2)$) if $U(1)_A$ restored.
+            \item {Previous}: 1st-order if $U(1)_A$ restored; 2nd-order $O(4)$ if $U(1)_A$ remains broken.
+            \item {New}: $O(4)$ if $U(1)_A$ remains; weak 1st-order, or 2nd-order ($O(4)\times Z_2$, $O(4)\times Z_4$, $O(4)\times O(2)$) if $U(1)_A$ restored.
         \end{itemize}
     The symmetry restoration behavior of $U(1)_A$ and flavor $SU(2)_L\times SU(2)_R$ will determine the final universality class
 \end{itemize}
