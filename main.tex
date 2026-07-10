@@ -108,8 +108,8 @@ with the scenario that
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
-\item  We extend this investigation to a more realistic $N_f=2+1$ QCD case adding strange quark
-\item  We improve it to finer lattice size up to $L48^3\times T16$
+\item  We extend this investigation to a more realistic $N_f=2+1$ QCD case adding strange quark and  improve it to finer lattice size up to L$48^3\times \rm T16(18)$ 
+\item  We study the physical point case for 
 \item  We measured spatial two point correlation function data and analysed the symmetry restoration behavior for physical point with different beta and chiral limit case by a fixed beta case with varying quark masses and lattice size
 \item  We examine the symmetry breaking by mesons screening masses as a more phenomenologically effective observable followed the idea of work in the 2-flavor case by JLQCD
  {\scriptsize [Phys. Rev. D \textbf{111}, 114506 (2025)]} \end{itemize}
@@ -253,8 +253,8 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 \begin{itemize}
     \item Perturbative $4-\epsilon$ expansion Renormalization Group Analysis of effective $\Phi^4$ linear sigma model for $\langle \bar{q} P_L q \rangle$. They found for $N_f > \sqrt{3}$ flavor symmetry, there's no stable IR fixed point. {\scriptsize [Pisarski-Wilczek (1983)]} \\
     \item %The anomaly effect term is a determinant term in the effective linear sigma model, which is a $N_f$-th order term. 
-    For $N_f \geq 3 $ flavor case, the anomaly effect doesn't change the order of the transition;But for $N_f = 2$ flavor case, it becomes a quadratic term, which can smooth out the singularity and change the transition to second order.  \\
-   \item  If the anomaly effect still exists, the transition can be $\mathrm{O}(4)$ class. If the anomaly effect is  suppressed and  $\mathrm{U}(1)_{\mathrm{A}} $ symmetry is restored before or at the critical temperature $T_c$, then transition should be still first order
+    For $N_f \geq 3 $ flavor case, the anomaly effect doesn't change the order of the transition; But for $N_f = 2$ flavor case, it becomes a quadratic term, which can smooth out the singularity and change the transition to second order.  \\
+   \item  If the anomaly effect still exists, the transition can be $\mathrm{O}(4)$ class. %If the anomaly effect is  suppressed and  $\mathrm{U}(1)_{\mathrm{A}} $ symmetry is restored before or at the critical temperature $T_c$, then transition should be still first order
 \item But recently higher-loop computations and FRG computations suggested different possibilities {\scriptsize [E.Vicari ,F.Basile, A.Pelissetto 2005 , G. Fejos 2022]}, and Conformal Boostrap results indicate some interesting points too{\scriptsize [Nakayama Ohtsuki 2016}
 \end{itemize}
 \vfill
@@ -304,7 +304,7 @@ where $\Sigma^i$ has three components,
 \begin{itemize}
     \item {Overlap Dirac Operator}: \\
     The massless operator $D_{\mathrm{ov}}(0) = \frac{1}{2} (1 + \gamma_5 \mathrm{sgn}(H_W))$ 
-    with Hermitian $\gamma_5 H_W$, satisfies the Ginsparg-Wilson relation:
+    with Hermitian $ H_W$, satisfies the Ginsparg-Wilson relation:
     \[ \gamma_5 D_{\mathrm{ov}} + D_{\mathrm{ov}} \gamma_5 = 2 D_{\mathrm{ov}} \gamma_5 D_{\mathrm{ov}} \]
     The massive overlap operator is defined as:
     \[ D_{\mathrm{ov}}(m) = D_{\mathrm{ov}}(0) + m (1 - D_{\mathrm{ov}}(0)) = \frac{1+m}{2} + \frac{1-m}{2} \gamma_5 \mathrm{sgn}(H_W) \]
@@ -333,8 +333,10 @@ where $\Sigma^i$ has three components,
 \[\ \ \ \  D^{\text{5D}}_{s,s'}(m) = D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) - m (D_{-}^{(1)} P_+ \delta_{s,1}\delta_{s',L_s} + D_{-}^{(L_s)} P_- \delta_{s,L_s}\delta_{s',1}) \]
 }
 
-\ \ where {\small $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, 
-and $P_\pm = \frac{1 \pm \gamma_5}{2}$.}
+\ \ \ where {\small $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, 
+and $P_\pm = \frac{1 \pm \gamma_5}{2}$.} 
+
+It corresponds to $H_{\rm MDWF} = \frac{\gamma_5(b+c) D_W}{2+(b-c)D_W}$, and we use $b=1.5,\ c=0.5$.
 
 \vspace{0.4em}
 {Residual Mass $m_{\text{res}}$ and Chiral Breaking $\Delta_L$}:
