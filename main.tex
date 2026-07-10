@@ -87,6 +87,7 @@ the order of the chiral phase transition (and universality class if it is 2nd-or
 %the higher loop linear sigma model study and Functional Renormalization Group analysis
 \begin{frame}
 \myheading{Motivation for this work}
+\vfill
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
@@ -103,6 +104,7 @@ with the scenario that
 
 \begin{frame}
 \myheading{Main part of this work}
+\vfill
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
@@ -125,14 +127,16 @@ QCD: \hfill
 \int \mathcal{D} A \mathcal{D}\bar{q} \mathcal{D}qe^{-
 S}$, Gauge Boson+Fermion\hfill\null
 
-\vspace{1em}
+\vspace{1em}{
+\centering
 $S =
 \int d^4x \left[ - \frac{1}{2g^2} \mathrm{Tr} F^{\mu\nu} F_{\mu\nu}
 + \bar q_a (i \slashed{D} - m_a) q_a \right]$, $a$ in
 [1,$N_f$]
-
+}
 \vspace{1em}
-Specifically,in the up-down quark mass zero limit:
+
+Specifically,in the up-down quark mass zero limit,
 
 Flavored chiral symmetry $SU(2)_L \times SU(2)_R$ :
 \[
@@ -268,10 +272,9 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 \vfill
 
 \begin{itemize}
-\item Perturbative analysis of screening masses from NRQCD$_3$ {\scriptsize{[Laine \& Vepsäläinen (2004)]}}:
-\[ \left[ 2 M - \frac{\nabla_{\ensuremath{\boldsymbol{r}}}^2}{\pi T} + V(\ensuremath{\boldsymbol{r}}) \right]\Psi_0 = m_{\ensuremath{\operatorname{scr}}} \Psi_0 \]
+\item Perturbative analysis of screening masses from NRQCD$_3$ {\scriptsize{[Laine \& Vepsäläinen (2004)]}},%\[ \left[ 2 M - \frac{\nabla_{\ensuremath{\boldsymbol{r}}}^2}{\pi T} + V(\ensuremath{\boldsymbol{r}}) \right]\Psi_0 = m_{\ensuremath{\operatorname{scr}}} \Psi_0 \]
 
-\item Degenerate Screening Mass: Solving the equation for the $N_f=2$ case yields:
+solving the equation for the $N_f=2$ case yields:
 \[ m_{\mathrm{scr}} = 2\pi T + 0.1872 g^2 T \]
 
 \item It  predicts the flavor non-singlet channel will tend to behave same screening mass.
@@ -299,16 +302,18 @@ where $\Sigma^i$ has three components,
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5pt}{11.5pt}\selectfont}
 \fontsize{9.5pt}{11.5pt}\selectfont
 \begin{itemize}
-    \item {Overlap Dirac Operator}:
-    The massless operator $D_{\mathrm{ov}}(0) = \frac{1}{2} (1 + \gamma_5 \mathrm{sgn}(H_W))$ satisfies the Ginsparg-Wilson relation:
+    \item {Overlap Dirac Operator}: \\
+    The massless operator $D_{\mathrm{ov}}(0) = \frac{1}{2} (1 + \gamma_5 \mathrm{sgn}(H_W))$ 
+    with Hermitian $\gamma_5 H_W$, satisfies the Ginsparg-Wilson relation:
     \[ \gamma_5 D_{\mathrm{ov}} + D_{\mathrm{ov}} \gamma_5 = 2 D_{\mathrm{ov}} \gamma_5 D_{\mathrm{ov}} \]
     The massive overlap operator is defined as:
     \[ D_{\mathrm{ov}}(m) = D_{\mathrm{ov}}(0) + m (1 - D_{\mathrm{ov}}(0)) = \frac{1+m}{2} + \frac{1-m}{2} \gamma_5 \mathrm{sgn}(H_W) \]
     
-    \item {5D Domain-Wall Realization}:
-    DWF approximates the sign function $\mathrm{sgn}(H_W)$ by introducing a 5th dimension of size $L_s$. The effective 4D operator is:
+    \item {5D Domain-Wall Realization}:\\
+    DWF approximates the sign function $\mathrm{sgn}(H_W)$ by introducing a 5th dimension of size $L_s$.
+     The effective 4D operator is:
     \[ D^{\text{4D}}_{\mathrm{DW}} (m) = \frac{1+ m}{2} + \frac{1 - m}{2} \gamma_5 \tanh (L_s \tanh^{- 1} (H_M)) \]
-    where $H_M = \gamma_5 \frac{2 D_W}{2 + D_W}$. As $L_s \to \infty$, it converges exponentially to the exact overlap operator $D_{\mathrm{ov}}(m)$.
+   It converges exponentially to the exact overlap operator $D_{\mathrm{ov}}(m)$.
 \end{itemize}
 \vfill
 \end{frame}
@@ -319,33 +324,29 @@ where $\Sigma^i$ has three components,
 \begin{frame}
 \myheading{Lattice QCD Numerical Setup}
 \vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{10.5pt}\selectfont}
-\fontsize{10.5pt}{12.5pt}\selectfont
+\setbeamerfont{itemize/enumerate body}{size=\small}
+\fontsize{10pt}{12.5pt}\selectfont
 
-{5D Möbius Dirac Operator ($L_s = 12$)}:
-\vspace{-1.2em}
-{\scriptsize
-\[ D^{\text{5D}}_{s,s'}(m) = D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) - m (D_{-}^{(1)} P_+ \delta_{s,1}\delta_{s',L_s} + D_{-}^{(L_s)} P_- \delta_{s,L_s}\delta_{s',1}) \]
+{5D Möbius Domain Wall Dirac Operator ($L_s = 12$)}:
+\vspace{-0.3em}
+{\small
+\[\ \ \ \  D^{\text{5D}}_{s,s'}(m) = D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) - m (D_{-}^{(1)} P_+ \delta_{s,1}\delta_{s',L_s} + D_{-}^{(L_s)} P_- \delta_{s,L_s}\delta_{s',1}) \]
 }
 
-{\scriptsize where $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, and $P_\pm = \frac{1 \pm \gamma_5}{2}$.}
-
-\vspace{0.6em}
-
-
-{Residual Mass $m_{\text{res}}$}:
-Explicit chiral symmetry violation due to finite $L_s$ is estimated by:
-
-{\scriptsize
-\[ am_{\text{res}} = \frac{\sum_{\vec{x}} \langle J_{5q}(\vec{x}, t) P(\vec{0}, 0) \rangle}{\sum_{\vec{x}} \langle P(\vec{x}, t) P(\vec{0}, 0) \rangle} \]
-}
-
-At lower $\beta$ values, $m_{\text{res}}$ is non-negligible:
+\ \ where {\small $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, 
+and $P_\pm = \frac{1 \pm \gamma_5}{2}$.}
 
 \vspace{0.4em}
+{Residual Mass $m_{\text{res}}$ and Chiral Breaking $\Delta_L$}:
+\vspace{-0.2em}
+\[ \overline{\psi} \Delta_L \psi \simeq m_{\mathrm{res}} \overline{\psi} \psi + O(\psi, \bar \psi, A) + \mathcal{O}(a^2), \quad am_{\text{res}} = \frac{\sum_{\vec{x}} \langle J_{5q}(\vec{x}, t) P(\vec{0}, 0) \rangle}{\sum_{\vec{x}} \langle P(\vec{x}, t) P(\vec{0}, 0) \rangle} \]
+
+It works very well at high beta case:
+\vspace{0.5em}
+
 \centering
 \tiny
-\setlength{\tabcolsep}{3.5pt}
+\setlength{\tabcolsep}{7.5pt}
 \renewcommand{\arraystretch}{1.1}
 \begin{tabular}{lcccccccc}
     \toprule
@@ -400,7 +401,7 @@ At lower $\beta$ values, $m_{\text{res}}$ is non-negligible:
         \centering
         \tiny
         \renewcommand{\arraystretch}{1.2}
-        \setlength{\tabcolsep}{3.5pt}
+        \setlength{\tabcolsep}{6.5pt}
         \begin{tabular}{lccccccc}
             \toprule
             $\beta$ & 4.13 & 4.15 & 4.17 & 4.18 & 4.20 & 4.23 & 4.30 \\
@@ -629,7 +630,6 @@ Multi-source analysis results (grey band shows 2-flavor $T_c = 158(3)$ MeV range
 \begin{frame}
 \myheading{$U(1)_A$ Symmetry ($X_t - T_t$)}
 
-The difference tends to decrease at high temperatures, suggesting approximate restoration of $U(1)_A$ symmetry (anomaly suppression), compared to the flavour symmetry :
 
 \begin{columns}[T]
     \begin{column}{0.48\textwidth}
@@ -649,29 +649,6 @@ The difference tends to decrease at high temperatures, suggesting approximate re
 \end{columns}
 \end{frame}
 
-% ==============================================================================
-% Slide 14d: U(1)_A Symmetry - S-PS (U(1)_A 轴向对称性恢复结果 - S-PS)
-% ==============================================================================
-\begin{frame}
-\myheading{$U(1)_A$ Symmetry ($S - PS$)}
-\vfill
-\begin{columns}[T]
-    \begin{column}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{symmetry_breaking_U1A_S_PS.pdf}\\
-        \vspace{0.2cm}
-        {\footnotesize Scalar vs Pseudo-Scalar ($U(1)_A$)}
-    \end{column}
-
-    \begin{column}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{symmetry_breaking_Chiral_AV_Vec.pdf}\\
-        \vspace{0.2cm}
-        {\footnotesize Vector vs Axial-Vector (Flavor Symmetry)}
-    \end{column}
-\end{columns}
-\vfill
-\end{frame}
 
 % ==============================================================================
 % Slide 15: SU(2)_CS Symmetry (手征自旋对称性结果)
@@ -692,6 +669,41 @@ The difference tends to decrease at high temperatures, suggesting approximate re
     \begin{column}{0.55\textwidth}
         \centering
         \includegraphics[width=\textwidth]{symmetry_breaking_Xt_AV.pdf}
+    \end{column}
+\end{columns}
+\vfill
+\end{frame}
+
+% ==============================================================================
+% Slide 15ab: Meson Screening Masses at Fixed Beta = 4.17 (固定Beta 4.17的介子筛选质量)
+% ==============================================================================
+\begin{frame}
+\myheading{Screening Masses at Fixed $\beta = 4.17$}
+\vfill
+Temperature dependence of screening masses for different light quark masses:
+\begin{columns}[c]
+    \begin{column}{0.65\textwidth}
+        \centering
+        \setlength{\tabcolsep}{2pt}
+        \begin{tabular}{cc}
+            \includegraphics[width=0.46\linewidth]{massvtem_0.0020.pdf} &
+            \includegraphics[width=0.46\linewidth]{massvtem_0.0035.pdf} \\
+            {\tiny $am_l = 0.0020$} & {\tiny $am_l = 0.0035$} \\
+            \vspace{0.2em} \\
+            \includegraphics[width=0.46\linewidth]{massvtem_0.0070.pdf} &
+            \includegraphics[width=0.46\linewidth]{massvtem_0.0120.pdf} \\
+            {\tiny $am_l = 0.0070$} & {\tiny $am_l = 0.0120$}
+        \end{tabular}
+    \end{column}
+    \begin{column}{0.32\textwidth}
+        \justifying
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11.5pt}\selectfont}
+        \setbeamerfont{itemize/enumerate subbody}{size=\fontsize{8.5pt}{11.5pt}\selectfont}
+        \begin{itemize}
+            \item Screening masses plotted as a function of temperature.
+            \item As temperature increases, partner channels in PS-S and V-AV sectors become degenerate.
+            \item This degeneration is observed for all simulated light quark masses.
+        \end{itemize}
     \end{column}
 \end{columns}
 \vfill
@@ -762,9 +774,10 @@ Asymmetry observables as a function of temperature for various light quark masse
 % ==============================================================================
 \begin{frame}
 \myheading{Summary and Outlook}
-%\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{10.5pt}{12.5pt}\selectfont}
+\setbeamerfont{itemize/enumerate subbody}{size=\fontsize{10.5pt}{12.5pt}\selectfont}
 \vfill
-\vspace{0.5ex}
+
 \begin{itemize}
     \item {Physical Point}: Crossover transition with $T_c \approx 158$ MeV. Above $T_c$, chiral and $U(1)_A$ symmetry breakings are consistent with zero within errors.
     \item {Chiral Limit Study}: Extrapolations to $am_l \to 0$ support simultaneous restoration of chiral flavor and $U(1)_A$ symmetries (with $T_c \approx 165$ MeV).
