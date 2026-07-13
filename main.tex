@@ -74,7 +74,7 @@
 \fontsize{11pt}{14pt}\selectfont
 \vfill
 \begin{itemize}
-\item Chiral phase transition is key to nuclear physics, cosmology, hadrons, and QGP
+\item Chiral phase transition, which occurred in the early universe, is key to nuclear physics, cosmology, hadrons, and QGP
 \item The behavior of related symmetries determines the order and universality class
 \item Previous lattice studies used algorithms that break chiral symmetry
 \end{itemize}
@@ -88,7 +88,7 @@
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
 \item We use Möbius Domain-Wall Fermions (MDWF) to respect chiral symmetry
-\item Previous JLQCD study investigated $N_f=2$ MDWF [PRD 111, 114506 (2025)]
+\item Our recent study by JLQCD collaboration investigated $N_f=2$ MDWF [PRD 111, 114506 (2025)]
 \item Now we extend the simulation by adding the strange quark ($N_f=2+1$)
 \end{itemize}
 \vfill
@@ -101,9 +101,10 @@
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
 \item  We extend this investigation to a more realistic $N_f=2+1$ QCD case adding strange quark and  improve it to finer lattice size up to L$48^3\times \rm T16$
-\item  We study the fixed $\beta = 4.17$ case to extract the chiral limit, and
- the physical point case to draw the QCD symmetry behavior in reality
-\item  We measured spatial two point correlation function data and analysed the symmetry restoration behavior for physical point with different beta and chiral limit case by a fixed beta case with varying quark masses and lattice size
+\item  We study the fixed $\beta = 4.17$ case  with 4 values of quark masses to
+investigate the quark mass dependence, and the physical point case
+varying beta.
+\item  We measure spatial two point correlation function data and analysed the symmetry restoration behavior for physical point with different beta and chiral limit case by a fixed beta case with varying quark masses and lattice size
 \item  We examine the symmetry breaking by mesons screening masses as a more phenomenologically effective observable followed the idea of work in the 2-flavor case by JLQCD
  {\scriptsize [Phys. Rev. D 111, 114506 (2025)]} \end{itemize}
 \vfill
@@ -247,9 +248,10 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 \vfill
 
 \begin{itemize}
-\item Perturbative analysis of screening masses  {\scriptsize{[Laine \& Vepsäläinen (2004)]}}, for the $N_f=2$ case yields:
+\item Perturbative analysis of screening masses  {\scriptsize{[Laine \& Vepsäläinen (2004)]}}, predicts for the $N_f=2$ case a \textbf{spin-independent} result of the meson screening masses at
+high T due to a large Matsubara mass::
 \[ m_{\mathrm{scr}} = 2\pi T + 0.1872 g^2 T \]
-\item It's spin structure independent.
+\item
 Inspire a larger symmetry, Chiral-Spin Symmetry $SU(2)_{CS}$ , may emerge:\begin{align*}
     q &\to \exp(i\Sigma^i\epsilon_i)q, \\
     \bar{q} &\to \bar{q}\gamma_0 \exp(-i\Sigma^i\epsilon_i)\gamma_0,
@@ -307,7 +309,7 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
     $T$ (MeV) & 138 & 145 & 153 & 157 & 164.5 & 176 & 202 & 241.6 \\
     \midrule
     $m_{\text{res}}/m_l$ & 0.9087 & 0.5360 & 0.3394 & 0.2744 & 0.1836 & 0.1041 & 0.0299 & 0.0049 \\
-    $m_{\text{res}}$ & 7.31e-4 & 4.98e-4 & 3.40e-4 & 2.80e-4 & 1.91e-4 & 1.08e-4 & 2.81e-5 & 3.75e-6 \\
+    $m_{\text{res}}$ (MeV) & 1.61 & 1.16 & 0.832 & 0.703 & 0.503 & 0.304 & 0.0908 & 0.0145 \\
     \bottomrule
 \end{tabular}
 \vfill
@@ -322,8 +324,8 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{11pt}\selectfont}
 \fontsize{9pt}{11pt}\selectfont
 \begin{itemize}
-    \item Physical Point: Lattice size $48^3 \times 16$, with 16-source measurements for all channels and directions.
-    \item Fixed $\beta = 4.17$: Varying light quark mass $am_l$ and temporal size $N_t$ to study the chiral limit.
+    \item Physical Point: Lattice size $48^3 \times 16$, with 16-source measurements averaging for all channels and take the averaging for all symmetric spatial directions.
+    \item Fixed $\beta = 4.17$: Varying light quark mass $am_l$ and temporal size $N_t$ to study the chiral limit, with 16 source measurement and spatial averaging too.
 \end{itemize}
 
 \vspace{0.5em}
@@ -380,42 +382,6 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 % ==========================================
 
 
-
-
-% ==============================================================================
-% Slide 12: Meson Channels & Directional Averaging (介子信道与方向平均)
-% ==============================================================================
-\begin{frame}
-\myheading{Meson Channels \& Directional Averaging}
-\vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12pt}\selectfont}
-\begin{itemize}
-    \item We employ 16-source measurements and directional averaging to improve data quality.
-    \item The specific averaging components for each channel are summarized in the table below:
-\end{itemize}
-
-\vspace{0.5em}
-
-\begin{table}[htbp]
-    \centering
-    \scriptsize
-    \renewcommand{\arraystretch}{1.25}
-    \begin{tabular}{lccl}
-        \toprule
-        Channel & Components & Averaged Directions (configured in \texttt{config.py}) \\
-        \midrule
-        AV (Axial Vector) & 6 & $X$ (\texttt{AVector2}, \texttt{AVector3}), $Y$ (\texttt{AVector1}, \texttt{AVector3}), $Z$ (\texttt{AVector1}, \texttt{AVector2}) \\
-        Vec (Vector) & 6 & $X$ (\texttt{Vector2}, \texttt{Vector3}), $Y$ (\texttt{Vector1}, \texttt{Vector3}), $Z$ (\texttt{Vector1}, \texttt{Vector2}) \\
-        S (Scalar) & 3 & $X, Y, Z$ (\texttt{TVector4}) \\
-        PS (Pseudo-Scalar) & 3 & $X, Y, Z$ (\texttt{TAVector4}) \\
-        Tt (Tensor) & 3 & $X$ (\texttt{TVector1}), $Y$ (\texttt{TVector2}), $Z$ (\texttt{TVector3}) \\
-        Xt (Axial Tensor) & 3 & $X$ (\texttt{TAVector1}), $Y$ (\texttt{TAVector2}), $Z$ (\texttt{TAVector3}) \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-\vfill
-\end{frame}
-
 % ==============================================================================
 % Slide 13: Extracting Screening Masses: Methodology (抽取筛选质量：方法学)
 % ==============================================================================
@@ -424,7 +390,7 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 \vfill
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12.5pt}\selectfont}
 \begin{itemize}
-    \item Screening Mass Fit: The physical screening mass $m_{\text{scr}}$ is extracted by performing a correlated $\chi^2$ fit of $C(x)$ to the asymptotic form:
+    \item Screening Mass Fit: The physical screening mass $m_{\text{scr}}$ is extracted by performing a least-squares $\chi^2$ fit of $C(x)$ to the asymptotic form:
     \[
         C(x) = A \cosh\left(m_{\text{scr}}\left(x - \frac{L}{2}\right)\right)
     \]
@@ -490,7 +456,7 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
                 &\quad \left( \langle (\mathrm{Tr} \slashed{D}^{-1})^2 \rangle - \langle \mathrm{Tr} \slashed{D}^{-1} \rangle^2 \right)
             \end{align*}}
             \item Fluctuations of order parameter, related to topological effects.
-            \item Clear peak determines the pseudo-critical temperature, consistent with the HotQCD result ($T_c = 156.5 \pm 1.5$ MeV).
+            \item Clear peak determines the pseudo-critical temperature, consistent with the HotQCD result(2019) :$T_c = 156.5 \pm 1.5$ MeV.
         \end{itemize}
     \end{column}
 \end{columns}
@@ -503,7 +469,7 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 \begin{frame}
 \myheading{Numerical Results}
 \vfill
-Multi-source analysis results (grey band shows 2-flavor $T_c = 158(3)$ MeV range {\scriptsize [PRD 111, 114506 (2025)]}):
+
 \begin{columns}[T] % [T] 表示顶部对齐
     % 左侧图: S vs PS
     \begin{column}{0.48\textwidth}
@@ -710,7 +676,7 @@ Asymmetry observables as a function of temperature for various light quark masse
 \vfill
 \begin{itemize}
     \item Physical Point: Crossover transition with $T_c \approx 158$ MeV determined by chiral condensation and disconnected susceptibility. Above $T_c$, chiral flavor and $U(1)_A$ symmetry breakings are consistent with zero within errors.
-    \item Chiral Limit Study: Extrapolations to $am_l \to 0$ support simultaneous restoration of chiral flavor and $U(1)_A$ symmetries.
+    \item Chiral Limit Study: Extrapolations to $am_l \to 0$ both of the breaking of chiral flavor and $U(1)_A$ symmetries consistent with zero within large noisy errors.
     \item Chiral-Spin Symmetry: Remains broken up to 220 MeV
     \item Outlook: Investigate the large oscillations in the $S$ (Scalar) channel near $T_c$ (potential physical origin); measure susceptibility and higher-order fluctuations, etc.
 \end{itemize}
