@@ -292,10 +292,12 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
             \[ \overline{\psi} \Delta_L \psi \simeq m_{\mathrm{res}} \overline{\psi} \psi+ O(A,\bar \psi, \psi) + \mathcal{O}(a^2) \]         
             {\scriptsize
             \begin{align*}
-                2\gamma_5\Delta_L &\equiv \gamma_5 \slashed{D}_{\mathrm{ov}}(0) + \slashed{D}_{\mathrm{ov}}(0)\gamma_5 - 2\slashed{D}_{\mathrm{ov}}(0)\gamma_5 \slashed{D}_{\mathrm{ov}}(0) \\
-                &= \frac{1}{2}\gamma_5\left(1 - \epsilon_{L_s}^2\right)
+                \delta_{\rm chiral} S_{\rm 4D} &= i\alpha m_q \bar\psi(\gamma_5 + \hat\gamma_5)\psi
+                  + 2i\alpha\bar\psi\gamma_5\Delta_L\psi\\
+                \Delta_L &= \frac{1}{4}(1-\epsilon^2_L)\\
             \end{align*}
             }
+
         \end{itemize}
     \end{column}
     \begin{column}{0.43\textwidth}
@@ -778,6 +780,15 @@ The massless operator $D_{\mathrm{ov}}(0) = \frac{1}{2} (1 + \gamma_5 \mathrm{sg
 \[ \gamma_5 D_{\mathrm{ov}} + D_{\mathrm{ov}} \gamma_5 = 2 D_{\mathrm{ov}} \gamma_5 D_{\mathrm{ov}} \]
 The massive overlap operator is defined as:
 \[ D_{\mathrm{ov}}(m) = D_{\mathrm{ov}}(0) + m (1 - D_{\mathrm{ov}}(0)) = \frac{1+m}{2} + \frac{1-m}{2} \gamma_5 \mathrm{sgn}(H_W) \]
+\begin{equation}
+\widehat{\gamma}_5 = \gamma_5 \left( 1 - 2 \slashed{D}_{\mathrm{ov}}(0) \right) = -\gamma_5 \mathrm{sgn}(H_W)
+\label{eq:hat_gamma_5}
+\end{equation}
+which is hermitian and satisfies $\widehat{\gamma}_5^2 = 1$ by virtue of the Ginsparg-Wilson relation. The lattice chiral transformation is defined as:
+\begin{equation}
+\delta \psi = i \alpha \widehat{\gamma}_5 \psi, \quad \delta \overline{\psi} = i \alpha \overline{\psi} \gamma_5
+\label{eq:overlap_chiral_trans}
+\end{equation}
 \vfill
 \end{frame}
 
