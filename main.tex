@@ -9,6 +9,8 @@
 \usepackage{slashed}
 \usepackage[skins]{tcolorbox}
 \usepackage{ragged2e}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
 % ----- 必须引入的宏包 -----
 \usepackage{booktabs}   % 提供 \toprule, \midrule, \bottomrule (三线表格式)
 \usepackage{amsmath}    % 数学公式基础
@@ -34,8 +36,8 @@
 \mysubtitle{}
 \vspace*{\fill}
 \mytitle{Analysis of Symmetry of 2-point Correlation Functions in Finite Temperature QCD}
-\centering{Using Möbius Domain-Wall Fermions}
-\vspace{1cm}
+\centering{\fontsize{13pt}{17pt}\selectfont Using Möbius Domain-Wall Fermions}
+\vspace{1.2cm}
 
 \centering{
 \mytext{Junxiong Nie, U. Osaka}
@@ -53,10 +55,10 @@
 \begin{center} % 1. 让内部的 minipage 整体居中显示
     \begin{minipage}{0.55\textwidth} % 2. 设定一个占屏幕宽度的 55% 的文本框 (内部默认左对齐)
 
-        \mybullet Research Background \\[0.5em]
-        \mybullet Theoretical Background \\[0.5em]
-        \mybullet Lattice Simulation Setup \\[0.5em]
-        \mybullet Numerical Results \\[0.5em]
+        \mybullet Research Background \\[1.0em]
+        \mybullet Theoretical Background \\[1.0em]
+        \mybullet Lattice Simulation Setup \\[1.0em]
+        \mybullet Numerical Results \\[1.0em]
         \mybullet Summary and Outlook
 
     \end{minipage}
@@ -70,11 +72,12 @@
 % ==============================================================================
 \begin{frame}
 \myheading{Research Background}
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
-\fontsize{11pt}{14pt}\selectfont
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{17pt}\selectfont}
+\fontsize{11pt}{17pt}\selectfont
 \vfill
 \begin{itemize}
-\item Chiral phase transition, which occurred in the early universe, is key to nuclear physics, cosmology, hadrons, and QGP
+\setlength{\itemsep}{0.8em}
+\item Chiral phase transition, which occurred in the early universe, is key to nuclear physics, cosmology, and Particle physics
 \item The behavior of related symmetries determines the order and universality class
 \item Previous lattice studies used algorithms that break chiral symmetry
 \end{itemize}
@@ -100,12 +103,12 @@
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
 \fontsize{11pt}{14pt}\selectfont
 \begin{itemize}
-\item  We extend this investigation to a more realistic $N_f=2+1$ QCD case adding strange quark and  improve it to finer lattice size up to L$48^3\times \rm T16$
+\item  We extend this investigation to a more realistic $N_f=2+1$ QCD case adding strange quark and  improve it to finer lattice size up to L$48^3\times \rm T16$ ($L_s = 12$)
 \item  We study the fixed $\beta = 4.17$ case  with 4 values of quark masses to
 investigate the quark mass dependence, and the physical point case
 varying beta.
 \item  We measure spatial two point correlation function data and analysed the symmetry restoration behavior for physical point with different beta and chiral limit case by a fixed beta case with varying quark masses and lattice size
-\item  We examine the symmetry breaking by mesons screening masses as a more phenomenologically effective observable followed the idea of work in the 2-flavor case by JLQCD
+
  {\scriptsize [Phys. Rev. D 111, 114506 (2025)]} \end{itemize}
 \vfill
 \end{frame}
@@ -144,6 +147,38 @@ $U(1)_A$ Symmetry :
 
 \vfill
 \end{frame}
+
+
+% ==============================================================================
+% Slide 8: Possible Emergent Larger Symmetry (可能涌现的更大对称性 - 手征自旋对称性)
+% ==============================================================================
+\begin{frame}
+\myheading{Possible Emergent Larger Symmetry}
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{10pt}{12pt}\selectfont}
+\fontsize{10pt}{12pt}\selectfont
+\vfill
+
+\begin{itemize}
+\item Perturbative analysis of screening masses  {\scriptsize{[Laine \& Vepsäläinen (2004)]}}, predicts for the $N_f=2$ case a \textbf{spin-independent} result of the meson screening masses at
+high T due to a large Matsubara mass::
+\[ m_{\mathrm{scr}} = 2\pi T + 0.1872 g^2 T \]
+\item
+Inspire a larger symmetry, Chiral-Spin Symmetry $SU(2)_{CS}$ , may emerge:\begin{align*}
+    q &\to \exp(i\Sigma^i\epsilon_i)q, \\
+    \bar{q} &\to \bar{q}\gamma_0 \exp(-i\Sigma^i\epsilon_i)\gamma_0,
+\end{align*}
+
+where $\Sigma^i$ has three components,
+
+\[
+    \Sigma^i = (\gamma_k, -i\gamma_5\gamma_k, \gamma_5), \quad k = 1, 2.
+\]
+
+\end{itemize}
+\vfill
+\end{frame}
+
+
 
 % ==============================================================================
 % Slide 5: Meson Correlation Functions (介子关联函数)
@@ -239,54 +274,99 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 
 
 % ==============================================================================
-% Slide 8: Possible Emergent Larger Symmetry (可能涌现的更大对称性 - 手征自旋对称性)
-% ==============================================================================
-\begin{frame}
-\myheading{Possible Emergent Larger Symmetry}
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{10pt}{12pt}\selectfont}
-\fontsize{10pt}{12pt}\selectfont
-\vfill
-
-\begin{itemize}
-\item Perturbative analysis of screening masses  {\scriptsize{[Laine \& Vepsäläinen (2004)]}}, predicts for the $N_f=2$ case a \textbf{spin-independent} result of the meson screening masses at
-high T due to a large Matsubara mass::
-\[ m_{\mathrm{scr}} = 2\pi T + 0.1872 g^2 T \]
-\item
-Inspire a larger symmetry, Chiral-Spin Symmetry $SU(2)_{CS}$ , may emerge:\begin{align*}
-    q &\to \exp(i\Sigma^i\epsilon_i)q, \\
-    \bar{q} &\to \bar{q}\gamma_0 \exp(-i\Sigma^i\epsilon_i)\gamma_0,
-\end{align*}
-
-where $\Sigma^i$ has three components,
-
-\[
-    \Sigma^i = (\gamma_k, -i\gamma_5\gamma_k, \gamma_5), \quad k = 1, 2.
-\]
-
-\end{itemize}
-\vfill
-\end{frame}
-
-% ==============================================================================
 % Slide 8b: Domain-Wall Fermions (Domain-Wall 费米子介绍页)
 % ==============================================================================
 \begin{frame}
 \myheading{Domain-Wall Fermions (DWF)}
 \vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5pt}{11.5pt}\selectfont}
-\fontsize{9.5pt}{11.5pt}\selectfont
-\begin{itemize}
-    \item 5D Domain-Wall Realization:
-    DWF realizes chiral fermions as states localized on the boundaries by adding a 5th dimension.
+\begin{columns}[c]
+    \begin{column}{0.55\textwidth}
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{10pt}\selectfont}
+        \fontsize{8.5pt}{10pt}\selectfont
+        \begin{itemize}
+            \item \textbf{Localized Chiral States}:
+            DWF realizes chiral fermions as boundary-localized states 
 
-    \item 5D Möbius Domain Wall Operator:
-    \[ D^{\text{5D}}_{s,s'}(m) = D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) - m (D_{-}^{(1)} P_+ \delta_{s,1}\delta_{s',L_s} + D_{-}^{(L_s)} P_- \delta_{s,L_s}\delta_{s',1}) \]
-    where $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, $P_\pm = \frac{1 \pm \gamma_5}{2}$. Here, $b=1.5,\ c=0.5$.
+            \item \textbf{Residual Mass and Chiral Breaking}:
+            At finite $L_s$, chiral symmetry is broken by:
+            \[ \overline{\psi} \Delta_L \psi \simeq m_{\mathrm{res}} \overline{\psi} \psi+ O(A,\bar \psi, \psi) + \mathcal{O}(a^2) \]         
+            {\scriptsize
+            \begin{align*}
+                2\gamma_5\Delta_L &\equiv \gamma_5 \slashed{D}_{\mathrm{ov}}(0) + \slashed{D}_{\mathrm{ov}}(0)\gamma_5 - 2\slashed{D}_{\mathrm{ov}}(0)\gamma_5 \slashed{D}_{\mathrm{ov}}(0) \\
+                &= \frac{1}{2}\gamma_5\left(1 - \epsilon_{L_s}^2\right)
+            \end{align*}
+            }
+        \end{itemize}
+    \end{column}
+    \begin{column}{0.43\textwidth}
+        \centering
+        \begin{tikzpicture}[x={(0.72cm,0.33cm)}, y={(0cm,0.85cm)}, z={(1.3cm,-0.17cm)}, font=\sffamily, scale=0.85]
+            \def\ls{2.5}
+            \draw[dashed, gray!50] (0,0,0) -- (0,0,\ls); \draw[dashed, gray!50] (0,2,0) -- (0,2,\ls);
+            \draw[dashed, gray!50] (1.5,0,0) -- (1.5,0,\ls); \draw[dashed, gray!50] (1.5,2,0) -- (1.5,2,\ls);
+            
+            % --- 5D 体内纯净背景 ---
+            \fill[black!2] (0,0,0) -- (0,2,0) -- (0,2,\ls) -- (0,0,\ls) -- cycle;
+            
+            % --- 阴影质感 1：左侧连续态衰减 (平滑线束渗入 - 红色调) ---
+            \foreach \i in {0, 1, ..., 25} {
+                \pgfmathsetmacro{\z}{0.05 + \i*1.1/25}        % 从 0.05 开始，向内渗入
+                \pgfmathsetmacro{\op}{0.75 * (1 - \i/25)^2}   % 增加不透明度，使颜色更饱满
+                \pgfmathsetmacro{\lw}{3.0 * (1 - \i/25)}      % 微调线宽
+                \draw[red!90, opacity=\op, solid, line cap=round, line width=\lw pt] (0, 0, \z) -- (0, 2, \z);
+            }
 
-    \item Residual Mass and Chiral Breaking:
-    At finite $L_s$, chiral symmetry is slightly broken by the residual mass:
-    \[ \overline{\psi} \Delta_L \psi \simeq m_{\mathrm{res}} \overline{\psi} \psi + O(\psi, \bar \psi, A) + \mathcal{O}(a^2) \]
-\end{itemize}
+            % --- 阴影质感 2：右侧颗粒态衰减 (点阵向中心消散 - 绿色调) ---
+            \foreach \i in {0, 1, ..., 20} {
+                \pgfmathsetmacro{\z}{2.45 - \i*1.1/20}        % 从 2.45 开始，向内渗入
+                \pgfmathsetmacro{\op}{0.6 * (1 - \i/20)^2}    
+                \pgfmathsetmacro{\lw}{3.5 * (1 - \i/20)}      
+                \draw[green!60!black, opacity=\op, dotted, line cap=round, line width=\lw pt] (0, 0, \z) -- (0, 2, \z);
+            }
+            
+            % 体内区域 of 轻微外边框
+            \draw[gray!30] (0,0,0) -- (0,2,0) -- (0,2,\ls) -- (0,0,\ls) -- cycle;
+            
+            % --- 左手手征边界 (严格盖在最上层 - 红色调) ---
+            \filldraw[fill=red!5, draw=red!70!black, opacity=0.9, thick] 
+                (0,0,0) -- (0,2,0) -- (1.5,2,0) -- (1.5,0,0) -- cycle;
+            \begin{scope}
+                \clip (0,0,0) -- (0,2,0) -- (1.5,2,0) -- (1.5,0,0) -- cycle;
+                \foreach \u in {-2.0, -1.8, ..., 3.5} {
+                    \draw[red!40, line width=0.6pt, opacity=0.9] (\u, 2, 0) -- (\u + 2, 0, 0);
+                }
+            \end{scope}
+            \node[red!80!black, font=\bfseries\tiny, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=1.5pt, rounded corners=1pt] 
+                at (0.75, 1, 0) {Left-handed\\Chirality};
+            
+            % --- 右手手征边界 (严格盖在最上层 - 绿色调) ---
+            \filldraw[fill=green!5, draw=green!70!black, opacity=0.9, thick] 
+                (0,0,\ls) -- (0,2,\ls) -- (1.5,2,\ls) -- (1.5,0,\ls) -- cycle;
+            \begin{scope}
+                \clip (0,0,\ls) -- (0,2,\ls) -- (1.5,2,\ls) -- (1.5,0,\ls) -- cycle;
+                \foreach \x in {0.05, 0.2, ..., 1.45} {
+                    \foreach \y in {0.05, 0.2, ..., 1.95} {
+                        \fill[green!40, opacity=0.9] (\x, \y, \ls) circle (0.6pt);
+                    }
+                }
+            \end{scope}
+            \node[green!60!black, font=\bfseries\tiny, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=1.5pt, rounded corners=1pt] 
+                at (0.75, 1, \ls) {Right-handed\\Chirality};
+            
+            % 5D 长度标注
+            \draw[<->, thick, >=stealth, black!60] (1.7, 0, 0) -- node[below, sloped, scale=0.6, text=black] {5th Dimension $L_s$} (1.7, 0, \ls);
+        \end{tikzpicture}
+        \vspace{0.3em}
+        
+        {\scriptsize
+        \begin{align*}
+            D^{\text{5D}}_{s,s'}(m) &= D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) \\
+            &- m (D_{-}^{(1)} P_+ \delta_{s,1}\delta_{s',L_s} + D_{-}^{(L_s)} P_- \delta_{s,L_s}\delta_{s',1})
+        \end{align*}
+        where $D_{+}^{(s)} = b_5 D_W + 1$, $D_{-}^{(s)} = c_5 D_W - 1$, $P_\pm = \frac{1 \pm \gamma_5}{2}$ ($b_5=1.5, c_5=0.5$).
+        }
+    \end{column}
+\end{columns}
 \vfill
 \end{frame}
 
