@@ -22,8 +22,6 @@
 
 % 强制接管所有 itemize 的正文字体，锁定为绝对大小 8pt，行距 10pt
 \setbeamerfont{itemize/enumerate body}{size=\fontsize{8pt}{10pt}\selectfont}
-
-% 如果您连子列表 (第二级、第三级) 也要强制锁死，加上这两行：
 \setbeamerfont{itemize/enumerate subbody}{size=\fontsize{7pt}{9pt}\selectfont}
 \setbeamerfont{itemize/enumerate subsubbody}{size=\fontsize{6pt}{8pt}\selectfont}
 
@@ -52,13 +50,14 @@
 \begin{frame}
 \myheading{Outline}
 \vfill
-\begin{center} % 1. 让内部的 minipage 整体居中显示
-    \begin{minipage}{0.55\textwidth} % 2. 设定一个占屏幕宽度的 55% 的文本框 (内部默认左对齐)
+\begin{center}
+    \begin{minipage}{0.78\textwidth}
 
-        \mybullet Research Background \\[1.0em]
-        \mybullet Theoretical Background \\[1.0em]
-        \mybullet Lattice Simulation Setup \\[1.0em]
-        \mybullet Numerical Results \\[1.0em]
+        \mybullet Research Background \& Motivation \\[0.9em]
+        \mybullet Theoretical Background \\[0.9em]
+        \mybullet Lattice QCD Simulation Setup \\[0.9em]
+        \mybullet Chiral Condensate \& Susceptibility Analysis \\[0.9em]
+        \mybullet Meson Screening Masses \& Symmetry Restoration \\[0.9em]
         \mybullet Summary and Outlook
 
     \end{minipage}
@@ -66,143 +65,125 @@
 \vfill
 \end{frame}
 
-
 % ==============================================================================
-% Slide 4: Research Background (研究背景)
+% Slide 3: Research Background (研究背景)
 % ==============================================================================
 \begin{frame}
 \myheading{Research Background}
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{17pt}\selectfont}
-\fontsize{11pt}{17pt}\selectfont
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{10.5pt}{15pt}\selectfont}
+\fontsize{10.5pt}{15pt}\selectfont
 \vfill
 \begin{itemize}
-\setlength{\itemsep}{0.8em}
-\item Chiral phase transition, which occurred in the early universe, is key to nuclear physics, cosmology, and Particle physics
-\item The behavior of related symmetries determines the order and universality class
-\item Previous lattice studies used algorithms that break chiral symmetry
-\end{itemize}
-\vfill
-\end{frame}
-%the higher loop linear sigma model study and Functional Renormalization Group analysis
-\begin{frame}
-\myheading{Motivation for this work}
-\vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
-\fontsize{11pt}{14pt}\selectfont
-\begin{itemize}
-\item We use Möbius Domain-Wall Fermions (MDWF) to respect chiral symmetry
-\item Our recent study by JLQCD collaboration investigated $N_f=2$ MDWF [PRD 111, 114506 (2025)]
-\item Now we extend the simulation by adding the strange quark ($N_f=2+1$)
+\setlength{\itemsep}{0.7em}
+\item According to \textbf{Pisarski \& Wilczek (1984)}, the restoration of $U(1)_A$ axial symmetry around the chiral phase transition is crucial for determining the order and universality class of the transition.
+\item Previous lattice studies often relied on staggered or Wilson-type fermions that explicitly break chiral or taste symmetries at finite lattice spacing $a$.
+\item Our recent $N_f = 2$ study by the \textbf{JLQCD Collaboration} {\scriptsize [Phys. Rev. D \textbf{111}, 114506 (2025)]} using Möbius Domain-Wall Fermions (MDWF) showed that both $SU(2)_L \times SU(2)_R$ chiral symmetry and $U(1)_A$ symmetry are effectively restored near $T_c \approx 165(3)$ MeV.
 \end{itemize}
 \vfill
 \end{frame}
 
-\begin{frame}
-\myheading{This work}
-\vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{11pt}{14pt}\selectfont}
-\fontsize{11pt}{14pt}\selectfont
-\begin{itemize}
-\item  We extend this investigation to a more realistic $N_f=2+1$ QCD case adding strange quark and  improve it to finer lattice size up to L$48^3\times \rm T16$ ($L_s = 12$)
-\item  We study the fixed $\beta = 4.17$ case  with 4 values of quark masses to
-investigate the quark mass dependence, and the physical point case
-varying beta.
-\item  We measure spatial two point correlation function data and analysed the symmetry restoration behavior for physical point with different beta and chiral limit case by a fixed beta case with varying quark masses and lattice size
-
- {\scriptsize [Phys. Rev. D 111, 114506 (2025)]} \end{itemize}
-\vfill
-\end{frame}
-%, to determine if $U(1)_{\rm A}$ restoration persists near the physical point.
 % ==============================================================================
-% Slide 4: Symmetry of QCD (QCD的对称性)
+% Slide 4: Motivation & Scope of This Work (工作动机与研究内容)
+% ==============================================================================
+\begin{frame}
+\myheading{Motivation \& Scope of This Work}
+\vfill
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{10pt}{14pt}\selectfont}
+\fontsize{10pt}{14pt}\selectfont
+\begin{itemize}
+\setlength{\itemsep}{0.65em}
+\item \textbf{Realistic $N_f = 2+1$ QCD with MDWF}: Extend our investigation by including the dynamical strange quark while preserving lattice chiral symmetry ($L_s = 12$).
+\item \textbf{Physical Point Temperature Scan ($48^3 \times 16$)}:
+  \begin{itemize}
+    \item Measure the renormalized subtracted chiral condensate $\Delta_{l,s}^R(T)$ and disconnected chiral susceptibility $\chi_{\mathrm{disc}}(T)$ across 8 couplings $\beta \in [4.13, 4.405]$ ($T \in [138.2, 241.6]$ MeV) to pin down $T_{pc}$.
+    \item Extract spatial meson screening masses across 6 channels using 16-source and directional averaging.
+  \end{itemize}
+\item \textbf{Fixed $\beta = 4.17$ Multi-Mass \& Finite-$N_t$ Scan}:
+  \begin{itemize}
+    \item Investigate quark mass dependence ($am_l \in \{0.0020, 0.0035, 0.0070, 0.0120\}$, $am_s = 0.040$) across $N_t \in \{12, 14, 16, 18\}$ ($T \in [136.0, 204.0]$ MeV, $a^{-1} \approx 2453$ MeV) on lattices up to $48^3 \times 18$ and $40^3 \times 16$.
+  \end{itemize}
+\end{itemize}
+\vfill
+\end{frame}
+
+% ==============================================================================
+% Slide 5: Symmetry of QCD (QCD的对称性)
 % ==============================================================================
 \begin{frame}
 \myheading{Symmetry of QCD}
 \vfill
-QCD: \hfill
+QCD Partition Function: \hfill
  $\mathcal{Z} =
-\int \mathcal{D} A \mathcal{D}\bar{q} \mathcal{D}qe^{-
-S}$, Gauge Boson+Fermion\hfill\null
+\int \mathcal{D} A \mathcal{D}\bar{q} \mathcal{D}qe^{-S}$, \quad Gauge Boson + Fermion\hfill\null
 
-\vspace{1em}{
+\vspace{0.8em}{
 \centering
 $S =
 \int d^4x \left[ - \frac{1}{2g^2} \mathrm{Tr} F^{\mu\nu} F_{\mu\nu}
-+ \bar q_a (i \slashed{D} - m_a) q_a \right]$, $a$ in
-[1,$N_f$]
++ \bar q_a (i \slashed{D} - m_a) q_a \right]$, \quad $a \in [1, N_f]$
 }
-\vspace{1em}
+\vspace{0.8em}
 
-Specifically,in the up-down quark mass zero limit,
+In the massless up-down quark limit ($m_{u,d} \to 0$):
 
 Flavored chiral symmetry $SU(2)_L \times SU(2)_R$ :
 \[
     q \to \exp(i\alpha_a T^a + i\beta_a T^a \gamma_5)q, \quad \bar{q} \to \bar{q} \exp(-i\alpha_a T^a + i\beta_a T^a \gamma_5),
 \]
 
-$U(1)_A$ Symmetry :
+$U(1)_A$ Axial Symmetry (broken at the quantum level by the ABJ anomaly):
 \[
-    q \to \exp(i\epsilon\gamma_5)q, \quad \bar{q} \to \bar{q} \exp(i\epsilon\gamma_5),
+    q \to \exp(i\epsilon\gamma_5)q, \quad \bar{q} \to \bar{q} \exp(i\epsilon\gamma_5).
 \]
 
 \vfill
 \end{frame}
 
-
 % ==============================================================================
-% Slide 8: Possible Emergent Larger Symmetry (可能涌现的更大对称性 - 手征自旋对称性)
+% Slide 6: Possible Emergent Larger Symmetry (可能涌现的更大对称性 - 手征自旋对称性)
 % ==============================================================================
 \begin{frame}
 \myheading{Possible Emergent Larger Symmetry}
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{10pt}{12pt}\selectfont}
-\fontsize{10pt}{12pt}\selectfont
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{10pt}{13pt}\selectfont}
+\fontsize{10pt}{13pt}\selectfont
 \vfill
 
 \begin{itemize}
-\item Perturbative analysis of screening masses  {\scriptsize{[Laine \& Vepsäläinen (2004)]}}, predicts for the $N_f=2$ case a \textbf{spin-independent} result of the meson screening masses at
-high T due to a large Matsubara mass::
-\[ m_{\mathrm{scr}} = 2\pi T + 0.1872 g^2 T \]
-\item
-Inspire a larger symmetry, Chiral-Spin Symmetry $SU(2)_{CS}$ , may emerge:\begin{align*}
+\setlength{\itemsep}{0.5em}
+\item Dimensional reduction / $\mathrm{NRQCD}_3$ perturbative analysis {\scriptsize{[Laine \& Vepsäläinen (2004)]}} predicts a \textbf{spin-independent} asymptotic screening mass at high $T$ due to the large Matsubara mass $M \approx \pi T$:
+\[ m_{\mathrm{scr}} = 2\pi T + g_E^2 \frac{C_F}{2\pi}\left(\frac{1}{2} + \hat{E}_0\right) \approx 2\pi T + 0.1872 g^2 T \]
+\item $U(1)_A$ is expected to be restored at high temperature as instanton/topological fluctuations are suppressed.
+\item Furthermore, an emergent larger symmetry, \textbf{Chiral-Spin Symmetry $SU(2)_{CS}$}, has been proposed in the regime where chromoelectric interactions dominate over chromomagnetic ones:
+\begin{align*}
     q &\to \exp(i\Sigma^i\epsilon_i)q, \\
-    \bar{q} &\to \bar{q}\gamma_0 \exp(-i\Sigma^i\epsilon_i)\gamma_0,
+    \bar{q} &\to \bar{q}\gamma_0 \exp(-i\Sigma^i\epsilon_i)\gamma_0,& \text{where } \Sigma^i = (\gamma_k, -i\gamma_5\gamma_k, \gamma_5), \quad k = 1, 2.
 \end{align*}
-
-where $\Sigma^i$ has three components,
-
-\[
-    \Sigma^i = (\gamma_k, -i\gamma_5\gamma_k, \gamma_5), \quad k = 1, 2.
-\]
-
 \end{itemize}
 \vfill
 \end{frame}
 
-
-
 % ==============================================================================
-% Slide 5: Meson Correlation Functions (介子关联函数)
+% Slide 7: Meson Correlation Functions (介子关联函数)
 % ==============================================================================
 \begin{frame}
-\myheading{ Meson Correlation Functions}
+\myheading{Meson Correlation Functions}
 \vfill
-We consider the
-following set of meson operators
+We consider the following set of flavor non-singlet meson operators:
 \begin{gather*}
     O_\Gamma(x) = \bar{q}(x)\Gamma F^aq(x), \\[2ex]
-    \Gamma \in \left\{ \mathbf{1}(S), \gamma_5(P), \gamma_\mu(V), \gamma_\mu\gamma_5(A), \sigma_{\mu\nu} = \frac{i}{2}[\gamma_\mu, \gamma_\nu](T), \sigma_{\mu\nu}\gamma_5(X) \right\}
+    \Gamma \in \left\{ \mathbf{1}(S),\; \gamma_5(PS),\; \gamma_\mu(V),\; \gamma_\mu\gamma_5(A),\; \sigma_{\mu\nu} = \frac{i}{2}[\gamma_\mu, \gamma_\nu](T),\; \sigma_{\mu\nu}\gamma_5(X) \right\}
 \end{gather*}
 
-And we measure the two-points correlation function of the meson operators of different channels.
-Accroding to the symmetry properties, the asymptotic behavior of the 2-point correlation function at large distances should be approximately be $A \rm{Cosh}(m_\Gamma(x-L/2)) $
+We measure the spatial two-point correlation functions along spatial directions ($x, y, z$).
+By periodicity on a lattice of spatial extent $L = N_s a$, the asymptotic behavior at large spatial separation is governed by the screening mass $m_\Gamma$:
+\[
+    C_\Gamma(x) \simeq A \cosh\!\left(m_\Gamma\left(x - \frac{N_s}{2}\right)\right)
+\]
 \vfill
 \end{frame}
 
-
-
-
 % ==============================================================================
-% Slide 6: Symmetry of Correlation Functions (关联函数的对称性与算符配对)
+% Slide 8: Symmetry of Correlation Functions (关联函数的对称性与算符配对)
 % ==============================================================================
 \begin{frame}
 \myheading{Symmetry of Correlation Functions}
@@ -219,7 +200,6 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
     \( \delta_A O_\Gamma^a = i \epsilon \bar{q} \{\Gamma, \gamma_5\} \frac{\tau^a}{2} q \)}
     \hfill\null
 \end{itemize}
-
 
 % --- 对照表与配对关系 ---
 \begin{columns}[T]
@@ -247,14 +227,13 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
     \footnotesize
     \renewcommand{\arraystretch}{1.2}
     \setlength{\tabcolsep}{3pt}
-% 表格列设计：共5列。前3列为数据，第4列处理第一层括号，第5列处理最外层括号
     \begin{tabular}{ccc @{\hspace{2pt}}ll}
         \toprule
         $\Gamma$ & Reference Name & Abbr. & \multicolumn{2}{l}{Symmetry Correspondences} \\
         \midrule
 
         $\mathbb{I}$ & Scalar & S & \rdelim\}{2}{*}[ \scriptsize{$\ U(1)_A$} ] & \\
-        $\gamma_5$ & Pseudo Scalar & PS & & \\ % 注：原图拼写就是 Psuedo，此处照抄原图
+        $\gamma_5$ & Pseudo Scalar & PS & & \\
 
         $\gamma_1, \gamma_2$ & Vector & $V$ & \rdelim\}{2}{*}[ \footnotesize{$\ SU(2)_L \times SU(2)_R$} ] & \hspace{-1.5em}\rdelim\}{4}{*}[ \footnotesize{$\ SU(2)_{CS}$} ] \\
         $\gamma_1\gamma_5, \gamma_2\gamma_5$ & Axial Vector & $A$ & & \\
@@ -269,35 +248,33 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 
 \end{frame}
 
-
-
-
-
 % ==============================================================================
-% Slide 8b: Domain-Wall Fermions (Domain-Wall 费米子介绍页)
+% Slide 9: Domain-Wall Fermions (Domain-Wall 费米子介绍页)
 % ==============================================================================
 \begin{frame}
 \myheading{Domain-Wall Fermions (DWF)}
 \vfill
 \begin{columns}[c]
     \begin{column}{0.55\textwidth}
-        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{10pt}\selectfont}
-        \fontsize{8.5pt}{10pt}\selectfont
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{10.5pt}\selectfont}
+        \fontsize{8.5pt}{10.5pt}\selectfont
         \begin{itemize}
             \item \textbf{Localized Chiral States}:
-            DWF realizes chiral fermions as boundary-localized states 
+            MDWF realizes 4D chiral fermions as boundary-localized states in the 5th dimension ($s \in [1, L_s]$):
+            \[
+              D_{\mathrm{DW}}^{\mathrm{4D}}(m) = \frac{1+m}{2} + \frac{1-m}{2}\gamma_5 \tanh\!\left(L_s \tanh^{-1}(H_M)\right)
+            \]
 
             \item \textbf{Residual Mass and Chiral Breaking}:
-            At finite $L_s$, chiral symmetry is broken by:
-            \[ \overline{\psi} \Delta_L \psi \simeq m_{\mathrm{res}} \overline{\psi} \psi+ O(A,\bar \psi, \psi) + \mathcal{O}(a^2) \]         
+            At finite $L_s$, residual overlap between boundaries induces $m_{\mathrm{res}}$:
+            \[ \overline{\psi} \Delta_L \psi \simeq m_{\mathrm{res}} \overline{\psi} \psi+ O(A,\bar \psi, \psi) + \mathcal{O}(a^2) \]
             {\scriptsize
             \begin{align*}
                 \delta_{\rm chiral} S_{\rm 4D} &= i\alpha m_q \bar\psi(\gamma_5 + \hat\gamma_5)\psi
                   + 2i\alpha\bar\psi\gamma_5\Delta_L\psi\\
-                \Delta_L &= \frac{1}{4}(1-\epsilon^2_L)\\
+                \Delta_L &= \frac{1}{4}(1-\epsilon^2_L)
             \end{align*}
             }
-
         \end{itemize}
     \end{column}
     \begin{column}{0.43\textwidth}
@@ -306,31 +283,30 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
             \def\ls{2.5}
             \draw[dashed, gray!50] (0,0,0) -- (0,0,\ls); \draw[dashed, gray!50] (0,2,0) -- (0,2,\ls);
             \draw[dashed, gray!50] (1.5,0,0) -- (1.5,0,\ls); \draw[dashed, gray!50] (1.5,2,0) -- (1.5,2,\ls);
-            
+
             % --- 5D 体内纯净背景 ---
             \fill[black!2] (0,0,0) -- (0,2,0) -- (0,2,\ls) -- (0,0,\ls) -- cycle;
-            
-            % --- 阴影质感 1：左侧连续态衰减 (平滑线束渗入 - 红色调) ---
+
+            % --- 阴影质感 1：左侧连续态衰减 ---
             \foreach \i in {0, 1, ..., 25} {
-                \pgfmathsetmacro{\z}{0.05 + \i*1.1/25}        % 从 0.05 开始，向内渗入
-                \pgfmathsetmacro{\op}{0.75 * (1 - \i/25)^2}   % 增加不透明度，使颜色更饱满
-                \pgfmathsetmacro{\lw}{3.0 * (1 - \i/25)}      % 微调线宽
+                \pgfmathsetmacro{\z}{0.05 + \i*1.1/25}
+                \pgfmathsetmacro{\op}{0.75 * (1 - \i/25)^2}
+                \pgfmathsetmacro{\lw}{3.0 * (1 - \i/25)}
                 \draw[red!90, opacity=\op, solid, line cap=round, line width=\lw pt] (0, 0, \z) -- (0, 2, \z);
             }
 
-            % --- 阴影质感 2：右侧颗粒态衰减 (点阵向中心消散 - 绿色调) ---
+            % --- 阴影质感 2：右侧颗粒态衰减 ---
             \foreach \i in {0, 1, ..., 20} {
-                \pgfmathsetmacro{\z}{2.45 - \i*1.1/20}        % 从 2.45 开始，向内渗入
-                \pgfmathsetmacro{\op}{0.6 * (1 - \i/20)^2}    
-                \pgfmathsetmacro{\lw}{3.5 * (1 - \i/20)}      
+                \pgfmathsetmacro{\z}{2.45 - \i*1.1/20}
+                \pgfmathsetmacro{\op}{0.6 * (1 - \i/20)^2}
+                \pgfmathsetmacro{\lw}{3.5 * (1 - \i/20)}
                 \draw[green!60!black, opacity=\op, dotted, line cap=round, line width=\lw pt] (0, 0, \z) -- (0, 2, \z);
             }
-            
-            % 体内区域 of 轻微外边框
+
             \draw[gray!30] (0,0,0) -- (0,2,0) -- (0,2,\ls) -- (0,0,\ls) -- cycle;
-            
-            % --- 左手手征边界 (严格盖在最上层 - 红色调) ---
-            \filldraw[fill=red!5, draw=red!70!black, opacity=0.9, thick] 
+
+            % --- 左手手征边界 ---
+            \filldraw[fill=red!5, draw=red!70!black, opacity=0.9, thick]
                 (0,0,0) -- (0,2,0) -- (1.5,2,0) -- (1.5,0,0) -- cycle;
             \begin{scope}
                 \clip (0,0,0) -- (0,2,0) -- (1.5,2,0) -- (1.5,0,0) -- cycle;
@@ -338,11 +314,11 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
                     \draw[red!40, line width=0.6pt, opacity=0.9] (\u, 2, 0) -- (\u + 2, 0, 0);
                 }
             \end{scope}
-            \node[red!80!black, font=\bfseries\tiny, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=1.5pt, rounded corners=1pt] 
+            \node[red!80!black, font=\bfseries\tiny, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=1.5pt, rounded corners=1pt]
                 at (0.75, 1, 0) {Left-handed\\Chirality};
-            
-            % --- 右手手征边界 (严格盖在最上层 - 绿色调) ---
-            \filldraw[fill=green!5, draw=green!70!black, opacity=0.9, thick] 
+
+            % --- 右手手征边界 ---
+            \filldraw[fill=green!5, draw=green!70!black, opacity=0.9, thick]
                 (0,0,\ls) -- (0,2,\ls) -- (1.5,2,\ls) -- (1.5,0,\ls) -- cycle;
             \begin{scope}
                 \clip (0,0,\ls) -- (0,2,\ls) -- (1.5,2,\ls) -- (1.5,0,\ls) -- cycle;
@@ -352,14 +328,14 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
                     }
                 }
             \end{scope}
-            \node[green!60!black, font=\bfseries\tiny, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=1.5pt, rounded corners=1pt] 
+            \node[green!60!black, font=\bfseries\tiny, align=center, fill=white, fill opacity=0.85, text opacity=1, inner sep=1.5pt, rounded corners=1pt]
                 at (0.75, 1, \ls) {Right-handed\\Chirality};
-            
+
             % 5D 长度标注
             \draw[<->, thick, >=stealth, black!60] (1.7, 0, 0) -- node[below, sloped, scale=0.6, text=black] {5th Dimension $L_s$} (1.7, 0, \ls);
         \end{tikzpicture}
         \vspace{0.3em}
-        
+
         {\scriptsize
         \begin{align*}
             D^{\text{5D}}_{s,s'}(m) &= D_{+}^{(s)}\delta_{s,s'} + D_{-}^{(s)} (P_+ \delta_{s-1,s'} + P_- \delta_{s+1,s'}) \\
@@ -373,85 +349,94 @@ Accroding to the symmetry properties, the asymptotic behavior of the 2-point cor
 \end{frame}
 
 % ==============================================================================
-% Slide 9: Lattice QCD Setup - Residual Mass (晶格QCD数值设置 - 残余质量表)
+% Slide 10: Residual Mass & Renormalization Factors (残余质量与重整化因子)
 % ==============================================================================
 \begin{frame}
-\myheading{Residual Mass Measurement}
+\myheading{Residual Mass \& Renormalization Setup}
 \vfill
-We measure the residual mass $am_{\text{res}}$ using the ratio of two-point correlation functions:
+We measure the residual mass $am_{\text{res}}$ from the midpoint pseudo-scalar density $J_{5q}$ and apply the scalar renormalization factor $Z_m(\beta)$:
 \[ am_{\text{res}} = \frac{\sum_{\vec{x}} \langle J_{5q}(\vec{x}, t) P(\vec{0}, 0) \rangle}{\sum_{\vec{x}} \langle P(\vec{x}, t) P(\vec{0}, 0) \rangle} \]
 
-\vspace{0.8em}
+\vspace{0.6em}
+{\setlength{\leftskip}{0pt}
 \centering
 \tiny
-\setlength{\tabcolsep}{7.5pt}
-\renewcommand{\arraystretch}{1.1}
+\setlength{\tabcolsep}{5.5pt}
+\renewcommand{\arraystretch}{1.25}
 \begin{tabular}{lcccccccc}
     \toprule
-    $T$ (MeV) & 138 & 145 & 153 & 157 & 164.5 & 176 & 202 & 241.6 \\
+    $\beta$ & 4.13 & 4.15 & 4.17 & 4.18 & 4.20 & 4.23 & 4.30 & 4.405 \\
+    $T$ (MeV) & 138.23 & 145.75 & 153.31 & 157.03 & 164.55 & 176.43 & 202.52 & 241.60 \\
     \midrule
+    $am_{\text{res}}$ & 7.31e-4 & 4.98e-4 & 3.40e-4 & 2.80e-4 & 1.91e-4 & 1.08e-4 & 2.81e-5 & 3.75e-6 \\
     $m_{\text{res}}/m_l$ & 0.9087 & 0.5360 & 0.3394 & 0.2744 & 0.1836 & 0.1041 & 0.0299 & 0.0049 \\
     $m_{\text{res}}$ (MeV) & 1.61 & 1.16 & 0.832 & 0.703 & 0.503 & 0.304 & 0.0908 & 0.0145 \\
+    $Z_m(\beta)$ & 0.9377 & 0.9524 & 0.9662 & 0.9729 & 0.9857 & 1.0038 & 1.0422 & 1.0927 \\
     \bottomrule
-\end{tabular}
+\end{tabular}\par}
 \vfill
 \end{frame}
 
 % ==============================================================================
-% Slide 10: Lattice Setup \& Configurations (晶格设置与配置数合并页)
+% Slide 11: Lattice Setup & Configurations (晶格设置与配置数合并页)
 % ==============================================================================
 \begin{frame}
-\myheading{Lattice Setup \& Configurations}
+\myheading{Lattice Setup \& Ensembles}
 \vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{11pt}\selectfont}
-\fontsize{9pt}{11pt}\selectfont
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
+\fontsize{8.5pt}{11pt}\selectfont
 \begin{itemize}
-    \item Physical Point: Lattice size $48^3 \times 16$, with 16-source measurements averaging for all channels and take the averaging for all symmetric spatial directions.
-    \item Fixed $\beta = 4.17$: Varying light quark mass $am_l$ and temporal size $N_t$ to study the chiral limit, with 16 source measurement and spatial averaging too.
+    \item \textbf{Physical Point Scan ($48^3 \times 16$)}: 8 couplings $\beta \in [4.13, 4.405]$ ($N_{\mathrm{cfg}}^{\mathrm{cond}} \approx 2000\text{--}4855$ for stochastic $Z_2$ condensate/susceptibility; $N_{\mathrm{cfg}}^{\mathrm{meson}} \approx 400$ with 16-source $\times$ directional averaging for correlators).
+    \item \textbf{Fixed $\beta = 4.17$ Multi-Mass \& Finite-$N_t$ Scan}: $a^{-1} = 2453$ MeV ($am_s = 0.040$), varying $am_l \in \{0.0020, 0.0035, 0.0070, 0.0120\}$ and $N_t \in \{12, 14, 16, 18\}$ with larger spatial volumes ($40^3\times 16, 48^3\times 18$) near/below $T_c$.
 \end{itemize}
 
-\vspace{0.5em}
+\vspace{0.3em}
 
-\begin{columns}[c]
+\begin{columns}[T]
     % 左列：物理点参数与配置数合并表
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.52\textwidth}
+        \setlength{\leftskip}{0pt}
         \centering
-        {\footnotesize Physical Point Setup ($N_f = 2+1$)} \\
-        \vspace{0.3em}
+        {\footnotesize Physical Point LCP Setup ($48^3 \times 16$, $N_f = 2+1$)} \\
+        \vspace{0.2em}
         \tiny
         \renewcommand{\arraystretch}{1.1}
-        \setlength{\tabcolsep}{3.5pt}
+        \setlength{\tabcolsep}{2.8pt}
         \begin{tabular}{cccccc}
             \toprule
-            $\beta$ & $T$ (MeV) & $am_s$ & $am_l$ & $N_{\mathrm{conf}}$ & Total Meas. \\
+            $\beta$ & $T$ (MeV) & $am_s$ & $am_l$ & $N_{\mathrm{cfg}}^{\mathrm{cond}}$ & $N_{\mathrm{cfg}}^{\mathrm{meson}}$ (16-src) \\
             \midrule
-            4.13 & 138   & 0.043547 & 0.000805 & 395 & 6320 \\
-            4.15 & 145   & 0.040843 & 0.000930 & 398 & 6368 \\
-            4.17 & 153   & 0.038400 & 0.001001 & 396 & 6336 \\
-            4.18 & 157   & 0.037265 & 0.001022 & 402 & 6432 \\
-            4.20 & 164.5 & 0.035150 & 0.001041 & 407 & 6512 \\
-            4.23 & 176   & 0.032315 & 0.001033 & 395 & 6320 \\
-            4.30 & 202   & 0.026930 & 0.000939 & 404 & 6464 \\
+            4.13  & 138.23 & 0.043547 & 0.000805 & 2000 & 395 (6320) \\
+            4.15  & 145.75 & 0.040843 & 0.000930 & 2024 & 398 (6368) \\
+            4.17  & 153.31 & 0.038400 & 0.001001 & 2008 & 396 (6336) \\
+            4.18  & 157.03 & 0.037265 & 0.001022 & 2029 & 402 (6432) \\
+            4.20  & 164.55 & 0.035150 & 0.001041 & 2072 & 407 (6512) \\
+            4.23  & 176.43 & 0.032315 & 0.001033 & 2012 & 395 (6320) \\
+            4.30  & 202.52 & 0.026930 & 0.000939 & 2052 & 404 (6464) \\
+            4.405 & 241.60 & 0.021032 & 0.000760 & 4855 & --- \\
             \bottomrule
         \end{tabular}
     \end{column}
 
     % 右列：固定Beta 4.17设置表
-    \begin{column}{0.48\textwidth}
+    \begin{column}{0.46\textwidth}
+        \setlength{\leftskip}{0pt}
         \centering
-        {\footnotesize Fixed $\beta = 4.17$ Setup} \\
-        \vspace{0.3em}
+        {\footnotesize Fixed $\beta = 4.17$ Setup ($a^{-1} = 2453$ MeV)} \\
+        \vspace{0.2em}
         \tiny
-        \renewcommand{\arraystretch}{1.15}
+        \renewcommand{\arraystretch}{1.12}
         \setlength{\tabcolsep}{2.5pt}
         \begin{tabular}{cccc}
             \toprule
             Lattice Size & $am_s$ & $am_l$ & $T$ (MeV) \\
             \midrule
-            $32^3 \times 12$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 220.00 \\
-            $32^3 \times 14$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 188.57 \\
-            $32^3 \times 16$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 165.00 \\
-            $36^3 \times 18$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 146.67 \\
+            $32^3 \times 12$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 204.00 \\
+            $32^3 \times 14$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 174.86 \\
+            $40^3 \times 16$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 153.00 \\
+            $32^3 \times 16$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 153.00 \\
+            $48^3 \times 18$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 136.00 \\
+            $36^3 \times 18$ & 0.040 & 0.0020, 0.0035, 0.0070, 0.0120 & 136.00 \\
             \bottomrule
         \end{tabular}
     \end{column}
@@ -459,36 +444,98 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 \vfill
 \end{frame}
 
-% ==========================================
-% 下面是重新排版的带有 PDF 图片的幻灯片
-% ==========================================
-
+% ==============================================================================
+% Slide 12: Chiral Condensate & Renormalization (手征凝聚与紫外减除)
+% ==============================================================================
+\begin{frame}
+\myheading{Renormalized Subtracted Chiral Condensate}
+\vfill
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
+\fontsize{8.5pt}{11pt}\selectfont
+\begin{itemize}
+    \item To eliminate additive UV divergences $\propto m_q / a^2$ and residual chiral breaking $m_{\mathrm{res}}$, we construct the renormalized subtracted condensate evaluated with $Z_2$ stochastic volume sources:
+    \[
+        \Delta_{\ell, s}^R(T) = \frac{1}{Z_m(\beta)} \left[ \langle\bar{\psi}\psi\rangle_\ell - \frac{m_\ell + m_{\mathrm{res}}}{m_s + m_{\mathrm{res}}} \langle\bar{\psi}\psi\rangle_s \right], \qquad \langle\bar{\psi}\psi\rangle_{\mathrm{phys}} = (N_t T)^3 \Delta_{\ell, s}^R(T)
+    \]
+\end{itemize}
+\begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+        \setlength{\leftskip}{0pt}
+        \centering
+        \includegraphics[width=0.92\textwidth]{conden_re_plot.pdf}\\
+        {\scriptsize Renormalized condensate $\Delta_{\ell,s}^R$ on $48^3 \times 16$}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+        \setlength{\leftskip}{0pt}
+        \centering
+        \includegraphics[width=0.92\textwidth]{conden_all_ensembles_overview.pdf}\\
+        {\scriptsize Global comparison: $48^3\times 16$ ($m_l\approx 0.001$) vs $\beta=4.17$ ($m_l=0.002$)}
+    \end{column}
+\end{columns}
+\vfill
+\end{frame}
 
 % ==============================================================================
-% Slide 13: Extracting Screening Masses: Methodology (抽取筛选质量：方法学)
+% Slide 13: Disconnected Chiral Susceptibility (非连通手征磁化率)
+% ==============================================================================
+\begin{frame}
+\myheading{Disconnected Chiral Susceptibility \& $T_{pc}$}
+\vfill
+\begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+        \setlength{\leftskip}{0pt}
+        \centering
+        \includegraphics[width=0.95\textwidth]{pbpchisce.pdf} \\
+        \vspace{0.1cm}
+        {\scriptsize $\chi_{\text{disc}}$ [$\mathrm{GeV}^2$] vs $T$ on $48^3 \times 16$ lattices}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+        \setlength{\leftskip}{0pt}
+        \justifying
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8pt}{10.5pt}\selectfont}
+        \begin{itemize}
+            \item \textbf{Unbiased Quadratic Estimator}: For $k$ stochastic sources $O_{\ell,i} = \mathrm{Tr}(D_\ell^{-1})_i$, diagonal noise bias is removed via:
+            {\scriptsize
+            \begin{gather*}
+                \overline{O^2} = \frac{1}{k(k-1)} \sum_{i \neq j} O_{\ell,i} O_{\ell,j} \\
+                \chi_{\mathrm{disc}} = (N_t T)^2 V \left(\langle\overline{O^2}\rangle - \langle\bar{O}\rangle^2\right)
+            \end{gather*}}
+            \item \textbf{Sharp Crossover Peak}: Reaches global maximum at $\beta = 4.18$ ($T = 157.03$ MeV):
+            {\scriptsize
+            \begin{gather*}
+                \chi_{\mathrm{disc}}(157.0\text{ MeV}) = 0.915(32)\text{ GeV}^2 \\
+                \chi_{\mathrm{disc}}/Z_m^2 = 0.967(34)\text{ GeV}^2
+            \end{gather*}}
+            \item \textbf{Padé $[3/2]$ Rational Fit}: Yields $T_{\mathrm{peak}} = 155.1(1.1)$ MeV ($\chi^2/\mathrm{dof} = 0.69$), in excellent agreement with the HotQCD crossover band $T_{pc} = 156.5 \pm 1.5$ MeV.
+        \end{itemize}
+    \end{column}
+\end{columns}
+\vfill
+\end{frame}
+
+% ==============================================================================
+% Slide 14: Extracting Screening Masses: Methodology (抽取筛选质量：方法学)
 % ==============================================================================
 \begin{frame}
 \myheading{Extracting Screening Masses: Methodology}
 \vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12.5pt}\selectfont}
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11.5pt}\selectfont}
 \begin{itemize}
-    \item Screening Mass Fit: The physical screening mass $m_{\text{scr}}$ is extracted by performing a least-squares $\chi^2$ fit of $C(x)$ to the asymptotic form:
+    \item \textbf{Multi-Source \& Directional Averaging}: Correlators are averaged over 16 spatial sources and all equivalent polarization/spatial directions ($x,y,z$), preserving signed correlators prior to folding around $N_s/2$.
+    \item \textbf{Local Effective Mass}: Solved numerically via vectorized Newton-Raphson at each separation $x$ to identify a flat ground-state plateau window $[x_{\text{min}}, x_{\text{max}}]$:
     \[
-        C(x) = A \cosh\left(m_{\text{scr}}\left(x - \frac{L}{2}\right)\right)
+        \frac{C(x)}{C(x + 1)} = \frac{\cosh(m_{\text{eff}}(x)(x - N_s/2))}{\cosh(m_{\text{eff}}(x)(x + 1 - N_s/2))}
     \]
-
-    \item Local Effective Mass: The local effective mass $m_{\text{eff}}(x)$ is solved numerically to identify a suitable plateau, which is used to determine the fitting range $[x_{\text{min}}, x_{\text{max}}]$:
+    \item \textbf{Screening Mass Fit \& Jackknife}: $m_{\text{scr}}$ is extracted by a least-squares $\chi^2$ fit on each binned Jackknife sample to eliminate HMC autocorrelation bias:
     \[
-        \frac{C(x)}{C(x + 1)} = \frac{\cosh(m_{\text{eff}}(x)(x - L/2))}{\cosh(m_{\text{eff}}(x)(x + 1 - L/2))}
+        C(x) = A \cosh\left(m_{\text{scr}}\left(x - \frac{N_s}{2}\right)\right)
     \]
-
-    \item Statistical Error: Jackknife method and Binning analysis are used to handle statistical uncertainties and eliminate HMC autocorrelation bias.
 \end{itemize}
 \vfill
 \end{frame}
 
 % ==============================================================================
-% Slide 14: Extracting Screening Masses: Fit Examples (抽取筛选质量：拟合示例)
+% Slide 15: Extracting Screening Masses: Fit Examples (抽取筛选质量：拟合示例)
 % ==============================================================================
 \begin{frame}
 \myheading{Extracting Screening Masses: Fit Examples}
@@ -499,7 +546,7 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
         \centering
         \includegraphics[width=\textwidth]{diff_clean_ps_plot.png}\\
         \vspace{0.2cm}
-        {\footnotesize correlation data of Vec channel for $\beta=4.15$(T=153MeV)}
+        {\footnotesize Symmetric Vector channel correlator for $\beta=4.15$ ($48^3\times 16$)}
     \end{column}
 
     % 右侧图: Effective mass
@@ -507,75 +554,41 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
         \centering
         \includegraphics[width=\textwidth]{ratioVec.pdf}\\
         \vspace{0.2cm}
-        {\footnotesize effective mass of Vec channel for $\beta=4.15$(T=153MeV)}
-    \end{column}
-\end{columns}
-\vfill
-\end{frame}
-
-
-% ==============================================================================
-% Slide 14c: Chiral Susceptibility (手征易受率)
-% ==============================================================================
-\begin{frame}
-\myheading{Disconnected Chiral Susceptibility}
-\vfill
-\begin{columns}[c]
-    \begin{column}{0.5\textwidth}
-        \centering
-        \includegraphics[width=0.85\textwidth]{pbpchisce.png} \\
-        \vspace{0.1cm}
-        {\footnotesize Disconnected susceptibility $\chi_{\text{dis}}$ vs Temperature}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-        \justifying
-        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11pt}\selectfont}
-        \begin{itemize}
-            \item \small Definition:
-            {\small
-            \begin{align*}
-                a^2 \chi_{\text{dis}} &= \frac{1}{N_s^3 N_\tau} \left( \frac{N_f}{4} \right)^2 \cdot \\
-                &\quad \left( \langle (\mathrm{Tr} \slashed{D}^{-1})^2 \rangle - \langle \mathrm{Tr} \slashed{D}^{-1} \rangle^2 \right)
-            \end{align*}}
-            \item Fluctuations of order parameter, related to topological effects.
-            \item Clear peak determines the pseudo-critical temperature, consistent with the HotQCD result(2019) :$T_c = 156.5 \pm 1.5$ MeV.
-        \end{itemize}
+        {\footnotesize Effective mass plateau: 16-source vs single-source ($\beta=4.15$)}
     \end{column}
 \end{columns}
 \vfill
 \end{frame}
 
 % ==============================================================================
-% Slide 15: Numerical Results (数值结果 - 筛选质量与对称性破缺对比图)
+% Slide 16: Numerical Results at Physical Point (物理点筛选质量与对称性破缺)
 % ==============================================================================
 \begin{frame}
-\myheading{Numerical Results}
+\myheading{Numerical Results at Physical Point ($48^3 \times 16$)}
 \vfill
-
-\begin{columns}[T] % [T] 表示顶部对齐
-    % 左侧图: S vs PS
+{\footnotesize Grey band denotes the crossover region $T_{pc} = 156.5 \pm 1.5$ MeV:}
+\begin{columns}[T]
     \begin{column}{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{simulation_results.pdf}\\
-        \vspace{0.2cm}
-        {\footnotesize simulated effective masses of different channels}
+        \vspace{0.1cm}
+        {\footnotesize Screening masses across 6 meson channels vs $T$}
     \end{column}
 
-    % 右侧图: Xt vs Tt
     \begin{column}{0.48\textwidth}
         \centering
         \includegraphics[width=\textwidth]{symmetry_breaking.pdf}\\
-        \vspace{0.2cm}
-        {\footnotesize Symmetry breaking of different channels}
+        \vspace{0.1cm}
+        {\footnotesize Symmetry breaking mass differences $\Delta M$ vs $T$}
     \end{column}
 \end{columns}
-
+\vspace{0.2em}
+{\scriptsize At $\beta=4.30$ ($T=202.5$ MeV): $aM_{\mathrm{Vec}}=0.3533(10) \approx aM_{\mathrm{AV}}=0.3529(12)$, $aM_{\mathrm{PS}}=0.2009(25) \approx aM_{\mathrm{S}}=0.2008(24)$, $aM_{\mathrm{Xt}}=0.4049(38) \approx aM_{\mathrm{Tt}}=0.4029(36)$.}
 \vfill
 \end{frame}
 
-
 % ==============================================================================
-% Slide 13: SU(2)_L x SU(2)_R Chiral Symmetry (手征对称性恢复结果)
+% Slide 17: SU(2)_L x SU(2)_R Chiral Symmetry (手征对称性恢复结果)
 % ==============================================================================
 \begin{frame}
 \myheading{$SU(2)_L \times SU(2)_R$ Chiral Symmetry}
@@ -587,7 +600,7 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
         \vspace{0.2em}
         \includegraphics[width=0.95\textwidth]{symmetry_breaking_Chiral_AV_Vec.pdf}\\
         \vspace{0.2cm}
-        {\scriptsize Restoration behavior of chiral symmetry}
+        {\scriptsize Restoration behavior of chiral symmetry ($AV - Vec$)}
     \end{column}
 
     \begin{column}{0.48\textwidth}
@@ -596,20 +609,19 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
         \vspace{0.2em}
         \includegraphics[width=0.95\textwidth]{su2in2.png}\\
         \vspace{0.2cm}
-        {\scriptsize For comparison [PRD 111, 114506 (2025)]}
+        {\scriptsize For comparison [PRD \textbf{111}, 114506 (2025)]}
     \end{column}
 \end{columns}
 \vfill
 \end{frame}
 
 % ==============================================================================
-% Slide 14: U(1)_A Symmetry (U(1)_A 轴向对称性恢复结果)
+% Slide 18: U(1)_A Symmetry (U(1)_A 轴向对称性恢复结果)
 % ==============================================================================
 \begin{frame}
 \myheading{$U(1)_A$ Symmetry ($X_t - T_t$)}
 \vfill
 \begin{columns}[c]
-    % 左半边：放大的 Our U(1)A
     \begin{column}{0.5\textwidth}
         \centering
         {\footnotesize Our $U(1)_A$ ($N_f = 2+1$ MDWF)} \\
@@ -617,7 +629,6 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
         \includegraphics[width=0.95\textwidth]{symmetry_breaking_U1A_Xt_Tt.pdf}
     \end{column}
 
-    % 右半边：另外两个，su2的图比u1in2更小
     \begin{column}{0.48\textwidth}
         \centering
         {\scriptsize Our Chiral ($N_f = 2+1$ MDWF)} \\
@@ -632,23 +643,23 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 \vfill
 \end{frame}
 
-
 % ==============================================================================
-% Slide 15: SU(2)_CS Symmetry (手征自旋对称性结果)
+% Slide 19: SU(2)_CS Symmetry (手征自旋对称性结果)
 % ==============================================================================
 \begin{frame}
-\myheading{$SU(2)_{CS}$ Symmetry}
+\myheading{$SU(2)_{CS}$ Chiral-Spin Symmetry}
 \vfill
 \begin{columns}[c]
-    % 左边放文字
-    \begin{column}{0.4\textwidth}
-        \justifying
-         Broken up to 202 MeV \\
-
+    \begin{column}{0.42\textwidth}
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12pt}\selectfont}
+        \begin{itemize}
+            \item Tested via the mass splitting between $X_t$ and $AV$ (or $AV$ and $T_t$) channels.
+            \item Remains significantly broken up to $T = 202.5$ MeV ($\Delta M_{X_t - AV} \approx 164(19)$ MeV).
+            \item Indicates that non-perturbative chromomagnetic interactions remain active in this temperature window.
+        \end{itemize}
     \end{column}
 
-    % 右边放图
-    \begin{column}{0.55\textwidth}
+    \begin{column}{0.54\textwidth}
         \centering
         \includegraphics[width=\textwidth]{symmetry_breaking_Xt_AV.pdf}
     \end{column}
@@ -657,33 +668,33 @@ We measure the residual mass $am_{\text{res}}$ using the ratio of two-point corr
 \end{frame}
 
 % ==============================================================================
-% Slide 15ab: Meson Screening Masses at Fixed Beta = 4.17 (固定Beta 4.17的介子筛选质量)
+% Slide 20: Meson Screening Masses at Fixed Beta = 4.17 (固定Beta 4.17的介子筛选质量)
 % ==============================================================================
 \begin{frame}
 \myheading{Screening Masses at Fixed $\beta = 4.17$}
 \vfill
-Temperature dependence of screening masses for different light quark masses:
+{\footnotesize Multi-source screening masses vs $T \in [136.0, 204.0]$ MeV ($48^3\times 18, 40^3\times 16, 32^3\times 14, 32^3\times 12$, $a^{-1}=2453$ MeV):}
 \begin{columns}[c]
-    \begin{column}{0.65\textwidth}
+    \begin{column}{0.66\textwidth}
         \centering
         \setlength{\tabcolsep}{2pt}
         \begin{tabular}{cc}
-            \includegraphics[width=0.46\linewidth]{massvtem_0.0020.pdf} &
-            \includegraphics[width=0.46\linewidth]{massvtem_0.0035.pdf} \\
+            \includegraphics[width=0.47\linewidth]{massvtem_0.0020.pdf} &
+            \includegraphics[width=0.47\linewidth]{massvtem_0.0035.pdf} \\
             {\tiny $am_l = 0.0020$} & {\tiny $am_l = 0.0035$} \\
-            \vspace{0.2em} \\
-            \includegraphics[width=0.46\linewidth]{massvtem_0.0070.pdf} &
-            \includegraphics[width=0.46\linewidth]{massvtem_0.0120.pdf} \\
+            \vspace{0.1em} \\
+            \includegraphics[width=0.47\linewidth]{massvtem_0.0070.pdf} &
+            \includegraphics[width=0.47\linewidth]{massvtem_0.0120.pdf} \\
             {\tiny $am_l = 0.0070$} & {\tiny $am_l = 0.0120$}
         \end{tabular}
     \end{column}
     \begin{column}{0.32\textwidth}
         \justifying
-        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8.5pt}{11.5pt}\selectfont}
-        \setbeamerfont{itemize/enumerate subbody}{size=\fontsize{8.5pt}{11.5pt}\selectfont}
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8pt}{11pt}\selectfont}
         \begin{itemize}
-            \item As temperature increases, partner channels in PS-S and V-AV sectors become degenerate.
-            \item This degeneration is observed for all simulated light quark masses.
+            \item Below $T_c$ ($136$ MeV, $48^3\times 18$), $V$--$A$ and $T_t$--$X_t$ split clearly while the pion ($PS$) remains light.
+            \item Above $T_c$ ($174.9, 204.0$ MeV), chiral partners ($V$--$A$) and axial partners ($T_t$--$X_t$) become degenerate across all four quark masses.
+            \item High-$T$ vector/tensor masses approach the free thermal asymptote $2\pi T$.
         \end{itemize}
     \end{column}
 \end{columns}
@@ -691,76 +702,98 @@ Temperature dependence of screening masses for different light quark masses:
 \end{frame}
 
 % ==============================================================================
-% Slide 15b: Symmetry Restoration at Fixed Beta = 4.17 (固定Beta 4.17的对称性恢复)
+% Slide 21: Symmetry Restoration at Fixed Beta = 4.17 (固定Beta 4.17的对称性恢复)
 % ==============================================================================
 \begin{frame}
 \myheading{Symmetry Restoration at Fixed $\beta=4.17$}
 \vfill
-Asymmetry observables as a function of temperature for various light quark masses:
+{\footnotesize Mass differences $\Delta M$ vs $T \in [136.0, 204.0]$ MeV for $am_l \in \{0.0020, 0.0035, 0.0070, 0.0120\}$ ($am_l=0.0020$ highlighted in purple):}
 \begin{columns}[c]
-    \begin{column}{0.62\textwidth}
+    \begin{column}{0.64\textwidth}
         \centering
+        \setlength{\tabcolsep}{2pt}
         \begin{tabular}{cc}
-            \includegraphics[width=0.42\textwidth]{dataSU(2)XSU(2) asym.pdf} &
-            \includegraphics[width=0.42\textwidth]{dataU(1)A asym.pdf} \\
-            {\tiny $SU(2)_L \times SU(2)_R$ (V-AV)} & {\tiny $U(1)_A$ (T-X)} \\
-            \includegraphics[width=0.42\textwidth]{dataU(1) asym.pdf} &
-            \includegraphics[width=0.42\textwidth]{dataSU(2)spinxchiral asym.pdf} \\
-            {\tiny $U(1)$ (S-PS)} & {\tiny $SU(2)_{CS}$ (X-AV)}
+            \includegraphics[width=0.46\linewidth]{dataSU(2)XSU(2) asym.pdf} &
+            \includegraphics[width=0.46\linewidth]{dataU(1)A asym.pdf} \\
+            {\tiny $SU(2)_L \times SU(2)_R$ ($\Delta M_{V-A}$)} & {\tiny $U(1)_A$ ($\Delta M_{T-X}$)} \\
+            \includegraphics[width=0.46\linewidth]{dataU(1) asym.pdf} &
+            \includegraphics[width=0.46\linewidth]{dataSU(2)spinxchiral asym.pdf} \\
+            {\tiny $U(1)_A$ ($\Delta M_{S-PS}$)} & {\tiny $SU(2)_{CS}$ ($\Delta M_{X-A}$)}
         \end{tabular}
     \end{column}
-    \begin{column}{0.35\textwidth}
+    \begin{column}{0.34\textwidth}
+        \justifying
+        \setbeamerfont{itemize/enumerate body}{size=\fontsize{8pt}{10.8pt}\selectfont}
+        \begin{itemize}
+            \item \textbf{$SU(2)_L \times SU(2)_R$ ($V-A$)}: Monotonically approaches zero above $T_c$; for $am_l=0.0020$, $\Delta M_{V-A}$ drops from $-159.9(33.7)$ MeV ($136$ MeV) to $-6.8(4.0)$ MeV ($204$ MeV).
+            \item \textbf{$U(1)_A$ ($T-X$)}: Simultaneously restores above $T_c$, reaching $+17.5(22.6)$ MeV at $204$ MeV ($am_l=0.0020$).
+            \item \textbf{$SU(2)_{CS}$ ($X-A$)}: Remains clearly non-zero ($\approx -92(12)$ MeV at $204$ MeV).
+        \end{itemize}
+    \end{column}
+\end{columns}
+\vfill
+\end{frame}
+
+% ==============================================================================
+% Slide 22: Chiral Limit Extrapolation at T = 204 MeV (T = 204 MeV 的手征极限外推)
+% ==============================================================================
+\begin{frame}
+\myheading{Chiral Limit Extrapolation ($T \approx 204$ MeV)}
+\vfill
+\begin{columns}[c]
+    \begin{column}{0.49\textwidth}
+        \setlength{\leftskip}{0pt}
+        \centering
+        \includegraphics[width=0.95\textwidth]{deltamassvsm.pdf} \\
+        \vspace{0.1cm}
+        {\scriptsize $\Delta M$ (MeV) vs $am_l$ at $T = 204.0$ MeV ($32^3 \times 12$, $\beta=4.17$)}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+        \setlength{\leftskip}{0pt}
         \justifying
         \setbeamerfont{itemize/enumerate body}{size=\fontsize{8pt}{11pt}\selectfont}
         \begin{itemize}
-            \item All symmetries show a clear trend towards restoration above $T_c$.
-            \item $U(1)_A$ and chiral $SU(2)_L \times SU(2)_R$ symmetries show an almost simultaneous restoration as we approach the chiral limit.
-            \item Chiral-spin symmetry $SU(2)_{CS}$ remains broken in the analyzed temperature range.
+            \item High-temperature snapshot at $T = 204.0$ MeV ($32^3 \times 12$) across $am_l \in \{0.0020, 0.0035, 0.0070, 0.0120\}$:
         \end{itemize}
-    \end{column}
-\end{columns}
-\vfill
-\end{frame}
-
-% ==============================================================================
-% Slide 15c: Chiral Limit Extrapolation at T = 220 MeV (T = 220 MeV 的手征极限外推)
-% ==============================================================================
-\begin{frame}
-\myheading{Chiral Limit Extrapolation ($T \approx 220$ MeV)}
-\vfill
-\begin{columns}[c]
-    \begin{column}{0.5\textwidth}
-        \centering
-        \includegraphics[width=0.85\textwidth]{deltamassvsm.pdf} \\
-        \vspace{0.1cm}
-        {\footnotesize Mass differences between mesonic partners as a function of $am_l$ at $T \approx 220$ MeV}
-    \end{column}
-    \begin{column}{0.45\textwidth}
-        \justifying
-        \setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12.5pt}\selectfont}
+        \vspace{0.2em}
+        {\centering
+        \tiny
+        \setlength{\tabcolsep}{2.5pt}
+        \renewcommand{\arraystretch}{1.15}
+        \begin{tabular}{cccc}
+            \toprule
+            $am_l$ & $\Delta M_{V-A}$ (MeV) & $\Delta M_{T-X}$ (MeV) & $\Delta M_{X-A}$ (MeV) \\
+            \midrule
+            0.0020 & $-6.84 \pm 3.96$  & $+17.48 \pm 22.64$ & $-91.56 \pm 11.60$ \\
+            0.0035 & $-2.10 \pm 1.34$  & $-60.92 \pm 51.07$ & $-157.45 \pm 30.17$ \\
+            0.0070 & $-14.91 \pm 5.62$ & $-3.98 \pm 14.64$  & $-94.35 \pm 11.14$ \\
+            0.0120 & $-41.47 \pm 6.12$ & $-22.34 \pm 16.08$ & $-93.57 \pm 13.04$ \\
+            \bottomrule
+        \end{tabular}\par}
+        \vspace{0.3em}
         \begin{itemize}
-            \item Analyzed mass differences at a high-temperature snapshot ($T \approx 220$ MeV) as a function of the bare light quark mass $am_l$.
-            \item As $am_l \to 0$, the mass differences between chiral partners ($m_{\text{Vec}}-m_{\text{AV}}$ and $m_{\text{S}}-m_{\text{PS}}$) extrapolate toward zero.
+            \item As $am_l \to 0$, both $\Delta M_{V-A}$ ($SU(2)_L\times SU(2)_R$) and $\Delta M_{T-X}$ ($U(1)_A$) extrapolate smoothly to zero.
+            \item In contrast, $\Delta M_{X-A}$ ($SU(2)_{CS}$) remains around $-92$ MeV even in the chiral limit.
         \end{itemize}
     \end{column}
 \end{columns}
 \vfill
 \end{frame}
 
-% ==========================================
-
 % ==============================================================================
-% Slide 16: Summary and Outlook (总结与展望)
+% Slide 23: Summary and Outlook (总结与展望)
 % ==============================================================================
 \begin{frame}
 \myheading{Summary and Outlook}
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5pt}{12pt}\selectfont}
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{12.5pt}\selectfont}
 \vfill
 \begin{itemize}
-    \item Physical Point: Crossover transition with $T_c \approx 158$ MeV determined by chiral condensation and disconnected susceptibility. Above $T_c$, chiral flavor and $U(1)_A$ symmetry breakings are consistent with zero within errors.
-    \item Chiral Limit Study: Extrapolations to $am_l \to 0$ both of the breaking of chiral flavor and $U(1)_A$ symmetries consistent with zero within large noisy errors.
-    \item Chiral-Spin Symmetry: Remains broken up to 220 MeV
-    \item Outlook: Investigate the large oscillations in the $S$ (Scalar) channel near $T_c$ (potential physical origin); measure susceptibility and higher-order fluctuations, etc.
+    \setlength{\itemsep}{0.5em}
+    \item \textbf{Chiral Crossover \& $T_{pc}$}: Renormalized subtracted chiral condensate $\Delta_{\ell,s}^R$ and disconnected chiral susceptibility $\chi_{\mathrm{disc}}$ on $48^3 \times 16$ MDWF lattices identify a smooth crossover with a peak at $\beta=4.18$ ($T = 157.0$ MeV; Padé fit $T_{\mathrm{peak}} = 155.1(1.1)$ MeV), consistent with HotQCD ($156.5 \pm 1.5$ MeV).
+    \item \textbf{Physical Point Symmetry Restoration}: Above $T_{pc}$, $SU(2)_L \times SU(2)_R$ ($V$--$AV$) and axial $U(1)_A$ ($T_t$--$X_t$, $S$--$PS$) screening mass splittings vanish within uncertainties at $T = 202.5$ MeV.
+    \item \textbf{Fixed $\beta = 4.17$ Chiral Limit Study}: Using 16-source signed correlators across $T \in [136, 204]$ MeV ($48^3\times 18$ to $32^3\times 12$), both $\Delta M_{V-A}$ and $\Delta M_{T-X}$ extrapolate to zero as $am_l \to 0$ at $T = 204$ MeV, supporting simultaneous restoration of $SU(2)_L \times SU(2)_R$ and $U(1)_A$.
+    \item \textbf{Chiral-Spin Symmetry $SU(2)_{CS}$}: Remains broken up to $204$ MeV ($\Delta M_{X-A} \approx -92(12)$ MeV), indicating active chromomagnetic interactions in the QGP regime just above $T_c$.
+    \item \textbf{Outlook}: Improve statistics for the noisy scalar ($S$) channel near $T_c$ and extend to finer lattice spacings toward the continuum limit.
 \end{itemize}
 \vfill
 \end{frame}
@@ -793,37 +826,76 @@ which is hermitian and satisfies $\widehat{\gamma}_5^2 = 1$ by virtue of the Gin
 \end{frame}
 
 \begin{frame}[noframenumbering]
-\myheading{Backup: Order of Chiral Phase Transition}
+\myheading{Backup: Order of Chiral Phase Transition \& Scenarios}
 \vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{9.5pt}{11.5pt}\selectfont}
-\fontsize{9.5pt}{11.5pt}\selectfont
+\setbeamerfont{itemize/enumerate body}{size=\fontsize{9pt}{11.5pt}\selectfont}
+\fontsize{9pt}{11.5pt}\selectfont
 \begin{itemize}
-    \item Perturbative $4-\epsilon$ expansion RG analysis of effective $\Phi^4$ linear sigma model shows no stable IR fixed point for $N_f > \sqrt{3}$ flavor symmetry {\scriptsize [Pisarski-Wilczek (1983)]}.
-    \item For $N_f \geq 3$, the anomaly effect doesn't change the order of the transition; for $N_f=2$, it becomes a quadratic term which can smooth out the singularity and make the transition 2nd-order.
-    \item If the anomaly effect still exists, the transition can be $\mathrm{O}(4)$ class.
-    \item Higher-loop/FRG computations suggest other possibilities {\scriptsize [Vicari et al. 2005, Fejos 2022]} and Conformal Bootstrap indicates interesting points {\scriptsize [Nakayama-Ohtsuki 2016]}.
+    \item Perturbative $4-\epsilon$ expansion RG analysis of effective $\Phi^4$ linear sigma model shows no stable IR fixed point for $N_f > \sqrt{3}$ flavor symmetry {\scriptsize [Pisarski-Wilczek (1984)]}.
+    \item For $N_f \geq 3$, the anomaly determinant term doesn't change the order of the transition; for $N_f=2$, it becomes a quadratic mass-like term which can smooth out the singularity and make the transition 2nd-order.
+    \item \textbf{Previous Scenario}: 1st-order if $U(1)_A$ is restored at $T_c$; 2nd-order $\mathrm{O}(4)$ if $U(1)_A$ remains broken.
+    \item \textbf{Recent Higher-Loop / FRG / Conformal Bootstrap Scenarios}: $\mathrm{O}(4)$ if $U(1)_A$ remains broken; weak 1st-order or 2nd-order ($\mathrm{O}(4)\times \mathbb{Z}_2$, $\mathrm{O}(4)\times \mathbb{Z}_4$, $\mathrm{O}(4)\times \mathrm{O}(2)$) if $U(1)_A$ is restored {\scriptsize [Pelissetto-Vicari (2013), Nakayama-Ohtsuki (2016), Fejos (2022)]}.
 \end{itemize}
 \vfill
 \end{frame}
 
 \begin{frame}[noframenumbering]
-\myheading{Backup: Transition Scenario}
+\myheading{Backup: Condensate \& Susceptibility Data Tables}
 \vfill
-\setbeamerfont{itemize/enumerate body}{size=\fontsize{10pt}{12pt}\selectfont}
-\fontsize{10pt}{12pt}\selectfont
-Symmetry restoration behavior of $U(1)_A$ and flavor $SU(2)_L\times SU(2)_R$ determines the universality class:
-\begin{itemize}
-    \item Previous Scenario: 1st-order if $U(1)_A$ is restored; 2nd-order $O(4)$ if $U(1)_A$ remains broken.
-    \item New Scenario: $O(4)$ if $U(1)_A$ remains broken; weak 1st-order, or 2nd-order ($O(4)\times Z_2$, $O(4)\times Z_4$, $O(4)\times O(2)$) if $U(1)_A$ is restored.
-\end{itemize}
+\begin{columns}[T]
+    \begin{column}{0.53\textwidth}
+        \setlength{\leftskip}{0pt}
+        \centering
+        {\scriptsize Standard $48^3 \times 16$ LCP Scan} \\
+        \vspace{0.2em}
+        \tiny
+        \setlength{\tabcolsep}{2.2pt}
+        \renewcommand{\arraystretch}{1.15}
+        \begin{tabular}{ccccc}
+            \toprule
+            $\beta$ & $T$ [MeV] & $\Delta_{\ell,s}^R$ & $\langle\bar{\psi}\psi\rangle_{\mathrm{sub}}^R$ [$\mathrm{GeV}^3$] & $\chi_{\mathrm{disc}}$ [$\mathrm{GeV}^2$] \\
+            \midrule
+            4.13  & 138.23 & $1.0608(67)\times 10^{-3}$ & $1.148(7)\times 10^{-2}$ & $0.662(23)$ \\
+            4.15  & 145.75 & $7.7109(68)\times 10^{-4}$ & $9.779(86)\times 10^{-3}$ & $0.780(27)$ \\
+            4.17  & 153.31 & $5.0728(66)\times 10^{-4}$ & $7.487(98)\times 10^{-3}$ & $0.858(26)$ \\
+            4.18  & 157.03 & $4.1649(66)\times 10^{-4}$ & $6.606(105)\times 10^{-3}$ & $0.915(32)$ \\
+            4.20  & 164.55 & $2.3896(56)\times 10^{-4}$ & $4.361(102)\times 10^{-3}$ & $0.766(28)$ \\
+            4.23  & 176.43 & $9.2886(381)\times 10^{-5}$ & $2.089(86)\times 10^{-3}$ & $0.409(23)$ \\
+            4.30  & 202.52 & $8.204(1330)\times 10^{-6}$ & $2.791(451)\times 10^{-4}$ & $0.072(15)$ \\
+            4.405 & 241.60 & $4.030(207)\times 10^{-7}$ & $2.328(120)\times 10^{-5}$ & $8.6(1.7)\times 10^{-5}$ \\
+            \bottomrule
+        \end{tabular}
+    \end{column}
+    \begin{column}{0.45\textwidth}
+        \setlength{\leftskip}{0pt}
+        \centering
+        {\scriptsize Fixed $\beta=4.17$ Scaling ($am_l=0.0020$)} \\
+        \vspace{0.2em}
+        \tiny
+        \setlength{\tabcolsep}{2.2pt}
+        \renewcommand{\arraystretch}{1.15}
+        \begin{tabular}{cccc}
+            \toprule
+            Size & $T$ [MeV] & $\Delta_{\ell,s}^R$ & $\chi_{\mathrm{disc}}$ [$\mathrm{GeV}^2$] \\
+            \midrule
+            $48^3\times 18$ & 136.28 & $1.055(14)\times 10^{-3}$ & $0.317(37)$ \\
+            $40^3\times 16$ & 153.31 & $6.491(38)\times 10^{-4}$ & $0.486(80)$ \\
+            $32^3\times 14$ & 175.21 & $2.039(24)\times 10^{-4}$ & $0.426(61)$ \\
+            $32^3\times 12$ & 204.41 & $-2.10(242)\times 10^{-5}$ & $0.136(52)$ \\
+            \bottomrule
+        \end{tabular}
+        \vspace{0.4em} \\
+        \includegraphics[width=0.78\textwidth]{pbpchisce_scaling_beta4.17.pdf}
+    \end{column}
+\end{columns}
 \vfill
 \end{frame}
 
 \begin{frame}[noframenumbering]
-\myheading{Backup: Summary of Correlation Functions}
+\myheading{Backup: Effective Mass Plateaus ($48^3 \times 18$, $\beta=4.17$)}
 \vfill
 \centering
-\includegraphics[width=0.75\textwidth]{summ_corr_all.pdf}
+\includegraphics[width=0.88\textwidth]{overview_48x18.png}
 \vfill
 \end{frame}
 
