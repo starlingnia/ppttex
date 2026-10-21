@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.2)  19 OCT 2026 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.10.23)  20 OCT 2026 10:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,90 +1030,98 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2
 
 {/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 86.
 
 
-LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 83.
-
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 83.
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 83.
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 86.
 
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 83.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 86.
 
 
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 83.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 83.
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 86.
 
 [3
 
-] [4
+]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 111.
+
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 111.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <9.5> not available
+(Font)              size <9> substituted on input line 111.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 111.
+
+[4
 
 ] [5
 
-] [6
+]
+
+LaTeX Font Warning: Font shape `T1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 162.
+
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 162.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 162.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 162.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 162.
+
+[6
 
 ] [7
 
 ]
-Overfull \hbox (7.46935pt too wide) in paragraph at lines 249--249
+Overfull \hbox (7.46935pt too wide) in paragraph at lines 248--248
  [][] 
  []
 
 
-Overfull \vbox (1.20035pt too high) detected at line 249
+Overfull \vbox (1.20035pt too high) detected at line 248
  []
 
 
-Overfull \vbox (1.20035pt too high) detected at line 249
+Overfull \vbox (1.20035pt too high) detected at line 248
  []
 
 
-Overfull \vbox (1.20035pt too high) detected at line 249
+Overfull \vbox (1.20035pt too high) detected at line 248
  []
 
 [8
 
 ]
-LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 349.
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 340.
 
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 349.
+Overfull \hbox (16.56073pt too wide) detected at line 340
+\OML/cmm/m/it/9 D[]\OT1/cmr/m/n/9 (\OML/cmm/m/it/9 m\OT1/cmr/m/n/9 ) = [] + []\
+OML/cmm/m/it/9 ^^M[] []  []
+ []
 
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
-(Font)              size <8> substituted on input line 349.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available
-(Font)              size <5> substituted on input line 349.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 349.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available
-(Font)              size <5> substituted on input line 349.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 349.
-
-
-LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <8.5> not available
-(Font)              size <8> substituted on input line 349.
-
-
-Overfull \hbox (21.51083pt too wide) detected at line 349
+Overfull \hbox (21.51083pt too wide) detected at line 340
 []
  []
 
@@ -1122,160 +1130,192 @@ Overfull \hbox (21.51083pt too wide) detected at line 349
 ] [10
 
 ]
-Overfull \hbox (3.106pt too wide) in paragraph at lines 445--445
+Overfull \hbox (3.106pt too wide) in paragraph at lines 428--428
  [][] 
  []
 
 [11
 
 ]
-<conden_re_plot.pdf, id=335, 570.34645pt x 426.71811pt>
+<conden_re_plot.pdf, id=333, 570.34645pt x 426.71811pt>
 File: conden_re_plot.pdf Graphic file (type pdf)
 <use conden_re_plot.pdf>
-Package pdftex.def Info: conden_re_plot.pdf  used on input line 476.
-(pdftex.def)             Requested size: 175.9044pt x 131.60408pt.
-<conden_all_ensembles_overview.pdf, id=336, 714.88644pt x 462.53583pt>
-File: conden_all_ensembles_overview.pdf Graphic file (type pdf)
-<use conden_all_ensembles_overview.pdf>
-Package pdftex.def Info: conden_all_ensembles_overview.pdf  used on input line 
-476.
-(pdftex.def)             Requested size: 175.9044pt x 113.80571pt.
+Package pdftex.def Info: conden_re_plot.pdf  used on input line 459.
+(pdftex.def)             Requested size: 219.08743pt x 163.91258pt.
  [12
 
- <./conden_re_plot.pdf> <./conden_all_ensembles_overview.pdf>]
-LaTeX Font Info:    Calculating math sizes for size <18> on input line 514.
+ <./conden_re_plot.pdf>]
+<conden_physical_mev3.pdf, id=444, 572.07103pt x 426.959pt>
+File: conden_physical_mev3.pdf Graphic file (type pdf)
+<use conden_physical_mev3.pdf>
+Package pdftex.def Info: conden_physical_mev3.pdf  used on input line 489.
+(pdftex.def)             Requested size: 219.08743pt x 163.50998pt.
+ [13
+
+ <./conden_physical_mev3.pdf>]
+LaTeX Font Info:    Calculating math sizes for size <18> on input line 521.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 514.
+(Font)              size <17.28> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 514.
+(Font)              size <12> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <18> not available
-(Font)              size <17.28> substituted on input line 514.
+(Font)              size <17.28> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <12.59995> not available
-(Font)              size <12> substituted on input line 514.
+(Font)              size <12> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 514.
+(Font)              size <17.28> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 514.
+(Font)              size <12> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18> not available
-(Font)              size <17.28> substituted on input line 514.
+(Font)              size <17.28> substituted on input line 521.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <12.59995> not available
-(Font)              size <12> substituted on input line 514.
+(Font)              size <12> substituted on input line 521.
 
-<pbpchisce.pdf, id=542, 607.71825pt x 426.31772pt>
-File: pbpchisce.pdf Graphic file (type pdf)
-<use pbpchisce.pdf>
-Package pdftex.def Info: pbpchisce.pdf  used on input line 514.
-(pdftex.def)             Requested size: 181.64018pt x 127.42143pt.
-[13
+<chisce_fit.pdf, id=547, 578.16pt x 397.485pt>
+File: chisce_fit.pdf Graphic file (type pdf)
+<use chisce_fit.pdf>
+Package pdftex.def Info: chisce_fit.pdf  used on input line 521.
+(pdftex.def)             Requested size: 231.03711pt x 158.83348pt.
+[14
 
- <./pbpchisce.pdf>] [14
+ <./chisce_fit.pdf>]
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 544.
+
+[15
 
 ]
-<diff_clean_ps_plot.png, id=696, 722.7pt x 469.755pt>
+<diff_clean_ps_plot.png, id=676, 722.7pt x 469.755pt>
 File: diff_clean_ps_plot.png Graphic file (type png)
 <use diff_clean_ps_plot.png>
-Package pdftex.def Info: diff_clean_ps_plot.png  used on input line 561.
+Package pdftex.def Info: diff_clean_ps_plot.png  used on input line 567.
 (pdftex.def)             Requested size: 191.20082pt x 124.27661pt.
-<ratioVec.pdf, id=698, 505.89pt x 325.215pt>
+<ratioVec.pdf, id=678, 505.89pt x 325.215pt>
 File: ratioVec.pdf Graphic file (type pdf)
 <use ratioVec.pdf>
-Package pdftex.def Info: ratioVec.pdf  used on input line 561.
+Package pdftex.def Info: ratioVec.pdf  used on input line 567.
 (pdftex.def)             Requested size: 191.20082pt x 122.91801pt.
- [15
+ [16
 
  <./diff_clean_ps_plot.png> <./ratioVec.pdf>]
-<simulation_results.pdf, id=770, 867.24pt x 578.16pt>
+<simulation_results.pdf, id=750, 867.24pt x 578.16pt>
 File: simulation_results.pdf Graphic file (type pdf)
 <use simulation_results.pdf>
-Package pdftex.def Info: simulation_results.pdf  used on input line 588.
+Package pdftex.def Info: simulation_results.pdf  used on input line 591.
 (pdftex.def)             Requested size: 191.20082pt x 127.46025pt.
-<symmetry_breaking.pdf, id=771, 867.24pt x 578.16pt>
+<symmetry_breaking.pdf, id=751, 867.24pt x 578.16pt>
 File: symmetry_breaking.pdf Graphic file (type pdf)
 <use symmetry_breaking.pdf>
-Package pdftex.def Info: symmetry_breaking.pdf  used on input line 588.
+Package pdftex.def Info: symmetry_breaking.pdf  used on input line 591.
 (pdftex.def)             Requested size: 191.20082pt x 127.46025pt.
-
-[16
+ [17
 
  <./simulation_results.pdf> <./symmetry_breaking.pdf>]
-<symmetry_breaking_Chiral_AV_Vec.pdf, id=922, 649.15338pt x 475.09872pt>
+<symmetry_breaking_Chiral_AV_Vec.pdf, id=901, 649.15338pt x 475.09872pt>
 File: symmetry_breaking_Chiral_AV_Vec.pdf Graphic file (type pdf)
 <use symmetry_breaking_Chiral_AV_Vec.pdf>
 Package pdftex.def Info: symmetry_breaking_Chiral_AV_Vec.pdf  used on input lin
-e 616.
+e 618.
 (pdftex.def)             Requested size: 181.64018pt x 132.93973pt.
-<su2in2.png, id=923, 537.00626pt x 404.51125pt>
+<su2in2.png, id=902, 537.00626pt x 404.51125pt>
 File: su2in2.png Graphic file (type png)
 <use su2in2.png>
-Package pdftex.def Info: su2in2.png  used on input line 616.
+Package pdftex.def Info: su2in2.png  used on input line 618.
 (pdftex.def)             Requested size: 181.64018pt x 136.82217pt.
- [17
+ [18
 
  <./symmetry_breaking_Chiral_AV_Vec.pdf> <./su2in2.png>]
-<symmetry_breaking_U1A_Xt_Tt.pdf, id=1000, 649.15338pt x 475.06735pt>
+<symmetry_breaking_U1A_Xt_Tt.pdf, id=980, 649.15338pt x 475.06735pt>
 File: symmetry_breaking_U1A_Xt_Tt.pdf Graphic file (type pdf)
 <use symmetry_breaking_U1A_Xt_Tt.pdf>
 Package pdftex.def Info: symmetry_breaking_U1A_Xt_Tt.pdf  used on input line 64
-4.
+5.
 (pdftex.def)             Requested size: 189.21022pt x 138.46915pt.
 File: symmetry_breaking_Chiral_AV_Vec.pdf Graphic file (type pdf)
 <use symmetry_breaking_Chiral_AV_Vec.pdf>
 Package pdftex.def Info: symmetry_breaking_Chiral_AV_Vec.pdf  used on input lin
-e 644.
+e 645.
 (pdftex.def)             Requested size: 99.42523pt x 72.76236pt.
-<u1ain2.png, id=1001, 529.98pt x 384.43625pt>
+<u1ain2.png, id=981, 529.98pt x 384.43625pt>
 File: u1ain2.png Graphic file (type png)
 <use u1ain2.png>
-Package pdftex.def Info: u1ain2.png  used on input line 644.
+Package pdftex.def Info: u1ain2.png  used on input line 645.
 (pdftex.def)             Requested size: 137.66481pt x 99.85721pt.
- [18
-
- <./symmetry_breaking_U1A_Xt_Tt.pdf> <./u1ain2.png>]
-<symmetry_breaking_Xt_AV.pdf, id=1076, 649.15338pt x 475.09872pt>
-File: symmetry_breaking_Xt_AV.pdf Graphic file (type pdf)
-<use symmetry_breaking_Xt_AV.pdf>
-Package pdftex.def Info: symmetry_breaking_Xt_AV.pdf  used on input line 668.
-(pdftex.def)             Requested size: 215.10016pt x 157.42825pt.
  [19
 
+ <./symmetry_breaking_U1A_Xt_Tt.pdf> <./u1ain2.png>]
+<symmetry_breaking_Xt_AV.pdf, id=1056, 649.15338pt x 475.09872pt>
+File: symmetry_breaking_Xt_AV.pdf Graphic file (type pdf)
+<use symmetry_breaking_Xt_AV.pdf>
+Package pdftex.def Info: symmetry_breaking_Xt_AV.pdf  used on input line 669.
+(pdftex.def)             Requested size: 215.10016pt x 157.42825pt.
+ [20
+
  <./symmetry_breaking_Xt_AV.pdf>]
-<massvtem_0.0020.pdf, id=1152, 361.35pt x 216.81pt>
+<massvtem_0.0020.pdf, id=1130, 361.35pt x 216.81pt>
 File: massvtem_0.0020.pdf Graphic file (type pdf)
 <use massvtem_0.0020.pdf>
-Package pdftex.def Info: massvtem_0.0020.pdf  used on input line 702.
-(pdftex.def)             Requested size: 123.56563pt x 74.13788pt.
-<massvtem_0.0035.pdf, id=1153, 361.35pt x 216.81pt>
+Package pdftex.def Info: massvtem_0.0020.pdf  used on input line 703.
+(pdftex.def)             Requested size: 119.10385pt x 71.4615pt.
+<massvtem_0.0035.pdf, id=1131, 361.35pt x 216.81pt>
 File: massvtem_0.0035.pdf Graphic file (type pdf)
 <use massvtem_0.0035.pdf>
-Package pdftex.def Info: massvtem_0.0035.pdf  used on input line 702.
-(pdftex.def)             Requested size: 123.56563pt x 74.13788pt.
-<massvtem_0.0070.pdf, id=1154, 361.35pt x 216.81pt>
+Package pdftex.def Info: massvtem_0.0035.pdf  used on input line 703.
+(pdftex.def)             Requested size: 119.10385pt x 71.4615pt.
+<massvtem_0.0070.pdf, id=1132, 361.35pt x 216.81pt>
 File: massvtem_0.0070.pdf Graphic file (type pdf)
 <use massvtem_0.0070.pdf>
-Package pdftex.def Info: massvtem_0.0070.pdf  used on input line 702.
-(pdftex.def)             Requested size: 123.56563pt x 74.13788pt.
-<massvtem_0.0120.pdf, id=1155, 361.35pt x 216.81pt>
+Package pdftex.def Info: massvtem_0.0070.pdf  used on input line 703.
+(pdftex.def)             Requested size: 119.10385pt x 71.4615pt.
+<massvtem_0.0120.pdf, id=1133, 361.35pt x 216.81pt>
 File: massvtem_0.0120.pdf Graphic file (type pdf)
 <use massvtem_0.0120.pdf>
-Package pdftex.def Info: massvtem_0.0120.pdf  used on input line 702.
-(pdftex.def)             Requested size: 123.56563pt x 74.13788pt.
- [20
+Package pdftex.def Info: massvtem_0.0120.pdf  used on input line 703.
+(pdftex.def)             Requested size: 119.10385pt x 71.4615pt.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 703.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 703.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <8.5> not available
+(Font)              size <8> substituted on input line 703.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.25> not available
+(Font)              size <5> substituted on input line 703.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 703.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.25> not available
+(Font)              size <5> substituted on input line 703.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 703.
+
+[21
 
  <./massvtem_0.0020.pdf> <./massvtem_0.0035.pdf
 
@@ -1290,28 +1330,28 @@ pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ./massvtem_0.0120.pdf): PDF inclusion: multiple 
 pdfs with page group included in a single page
 >]
-<dataSU(2)XSU(2) asym.pdf, id=1263, 361.35pt x 216.81pt>
+<dataSU(2)XSU(2) asym.pdf, id=1241, 361.35pt x 216.81pt>
 File: dataSU(2)XSU(2) asym.pdf Graphic file (type pdf)
 <use dataSU(2)XSU(2) asym.pdf>
-Package pdftex.def Info: dataSU(2)XSU(2) asym.pdf  used on input line 735.
-(pdftex.def)             Requested size: 117.27248pt x 70.36316pt.
-<dataU(1)A asym.pdf, id=1264, 361.35pt x 216.81pt>
+Package pdftex.def Info: dataSU(2)XSU(2) asym.pdf  used on input line 737.
+(pdftex.def)             Requested size: 113.60692pt x 68.16318pt.
+<dataU(1)A asym.pdf, id=1242, 361.35pt x 216.81pt>
 File: dataU(1)A asym.pdf Graphic file (type pdf)
 <use dataU(1)A asym.pdf>
-Package pdftex.def Info: dataU(1)A asym.pdf  used on input line 735.
-(pdftex.def)             Requested size: 117.27248pt x 70.36316pt.
-<dataU(1) asym.pdf, id=1265, 361.35pt x 216.81pt>
+Package pdftex.def Info: dataU(1)A asym.pdf  used on input line 737.
+(pdftex.def)             Requested size: 113.60692pt x 68.16318pt.
+<dataU(1) asym.pdf, id=1243, 361.35pt x 216.81pt>
 File: dataU(1) asym.pdf Graphic file (type pdf)
 <use dataU(1) asym.pdf>
-Package pdftex.def Info: dataU(1) asym.pdf  used on input line 735.
-(pdftex.def)             Requested size: 117.27248pt x 70.36316pt.
-<dataSU(2)spinxchiral asym.pdf, id=1266, 361.35pt x 216.81pt>
+Package pdftex.def Info: dataU(1) asym.pdf  used on input line 737.
+(pdftex.def)             Requested size: 113.60692pt x 68.16318pt.
+<dataSU(2)spinxchiral asym.pdf, id=1244, 361.35pt x 216.81pt>
 File: dataSU(2)spinxchiral asym.pdf Graphic file (type pdf)
 <use dataSU(2)spinxchiral asym.pdf>
-Package pdftex.def Info: dataSU(2)spinxchiral asym.pdf  used on input line 735.
+Package pdftex.def Info: dataSU(2)spinxchiral asym.pdf  used on input line 737.
 
-(pdftex.def)             Requested size: 117.27248pt x 70.36316pt.
- [21
+(pdftex.def)             Requested size: 113.60692pt x 68.16318pt.
+ [22
 
  <./dataSU(2)XSU(2) asym.pdf> <./dataU(1)A asym.pdf
 
@@ -1326,41 +1366,47 @@ fs with page group included in a single page
 pdfTeX warning: pdflatex (file ./dataSU(2)spinxchiral asym.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >]
-<deltamassvsm.pdf, id=1454, 361.35pt x 216.81pt>
+<deltamassvsm.pdf, id=1432, 361.35pt x 216.81pt>
 File: deltamassvsm.pdf Graphic file (type pdf)
 <use deltamassvsm.pdf>
-Package pdftex.def Info: deltamassvsm.pdf  used on input line 781.
-(pdftex.def)             Requested size: 185.42809pt x 111.25644pt.
- [22
+Package pdftex.def Info: deltamassvsm.pdf  used on input line 764.
+(pdftex.def)             Requested size: 189.21022pt x 113.5259pt.
+ [23
 
- <./deltamassvsm.pdf>] [23
+ <./deltamassvsm.pdf>]
 
-] [24
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 781.
+
+[24
 
 ] [25
 
 ] [26
 
+] [27
+
 ]
-Overfull \hbox (15.80928pt too wide) in paragraph at lines 892--892
+Overfull \hbox (15.80928pt too wide) in paragraph at lines 872--872
  [][] 
  []
 
-<pbpchisce_scaling_beta4.17.pdf, id=1621, 607.71825pt x 426.31772pt>
-File: pbpchisce_scaling_beta4.17.pdf Graphic file (type pdf)
-<use pbpchisce_scaling_beta4.17.pdf>
-Package pdftex.def Info: pbpchisce_scaling_beta4.17.pdf  used on input line 892
-.
-(pdftex.def)             Requested size: 139.81566pt x 98.08353pt.
-[27
+[28
 
- <./pbpchisce_scaling_beta4.17.pdf>]
-<overview_48x18.png, id=1726, 1084.05pt x 650.43pt>
+]
+
+LaTeX Font Warning: Font shape `T1/cmr/bx/n' in size <8.5> not available
+(Font)              size <8> substituted on input line 903.
+
+[29
+
+]
+<overview_48x18.png, id=1650, 1084.05pt x 650.43pt>
 File: overview_48x18.png Graphic file (type png)
 <use overview_48x18.png>
-Package pdftex.def Info: overview_48x18.png  used on input line 900.
+Package pdftex.def Info: overview_48x18.png  used on input line 911.
 (pdftex.def)             Requested size: 350.5399pt x 210.32529pt.
- [28
+ [30
 
  <./overview_48x18.png>]
 \tf@nav=\write6
@@ -1386,13 +1432,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28931 strings out of 474116
- 597745 string characters out of 5743682
- 1973187 words of memory out of 5000000
- 50661 multiletter control sequences out of 15000+600000
- 591712 words of font info for 129 fonts, out of 8000000 for 9000
+ 28977 strings out of 474116
+ 598193 string characters out of 5743681
+ 1971187 words of memory out of 5000000
+ 50703 multiletter control sequences out of 15000+600000
+ 594678 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,21n,123p,386b,1100s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,21n,123p,379b,1100s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
@@ -1420,29 +1466,27 @@ f-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2024/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2024/texmf-dist/f
-onts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-di
-st/fonts/type1/public/cm-super/sfbx0500.pfb></usr/local/texlive/2024/texmf-dist
-/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2024/texmf-dist/f
-onts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2024/texmf-dist/fon
-ts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2024/texmf-dist/fonts
-/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
-ype1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
-/public/cm-super/sfrm0600.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
-lic/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
-cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm
--super/sfrm1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super
-/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/s
-frm2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfs
-s1200.pfb>
-Output written on main.pdf (28 pages, 1642918 bytes).
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2024/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texm
+f-dist/fonts/type1/public/cm-super/sfbx0500.pfb></usr/local/texlive/2024/texmf-
+dist/fonts/type1/public/cm-super/sfbx0700.pfb></usr/local/texlive/2024/texmf-di
+st/fonts/type1/public/cm-super/sfbx0800.pfb></usr/local/texlive/2024/texmf-dist
+/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2024/texmf-dist/f
+onts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2024/texmf-dist/fon
+ts/type1/public/cm-super/sfrm0500.pfb></usr/local/texlive/2024/texmf-dist/fonts
+/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2024/texmf-dist/fonts/t
+ype1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2024/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1
+/public/cm-super/sfrm1095.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/p
+ublic/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/
+cm-super/sfrm2488.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm
+-super/sfss1200.pfb>
+Output written on main.pdf (30 pages, 1557343 bytes).
 PDF statistics:
- 1959 PDF objects out of 2073 (max. 8388607)
- 1143 compressed objects within 12 object streams
- 59 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1876 PDF objects out of 2073 (max. 8388607)
+ 1169 compressed objects within 12 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 153 words of extra memory for PDF output out of 10000 (max. 10000000)
 
